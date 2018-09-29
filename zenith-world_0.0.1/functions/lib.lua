@@ -1,3 +1,7 @@
+zen.lib.fluidCapableCategories = { "chemistry", "crafting-with-fluid", "oil-processing" }
+zen.lib.fluidUpgradeableCategories = { "crafting", "advanced-crafting", nil }
+
+-- duplicates an element from raw data
 function zen.lib.duplicateFromRaw(type, name, overrides)
   local new = {}
 
