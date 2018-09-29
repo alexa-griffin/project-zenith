@@ -28,5 +28,5 @@ if not exist %CD%\%mod_name_ver% mkdir %CD%\%mod_name_ver%
   echo.>%CD%\%mod_name_ver%\locale\en\base.cfg
 
 
-  Mklink /D C:\Users\agriffin2\AppData\Roaming\Factorio\mods\!mod_name_ver! %CD%\!mod_name_ver!
+  Mklink /D C:\Users\alexa\AppData\Roaming\Factorio\mods\!mod_name_ver! %CD%\!mod_name_ver!
 pause
