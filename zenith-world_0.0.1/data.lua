@@ -6,5 +6,6 @@ zen.world.debug = settings.startup["zen-debug"].value
 zen.world.beta = settings.startup["zen-beta"].value
 
 
-if zen.world.
-require("test")
+if zen.world.debug then
+  require("test")
+end
