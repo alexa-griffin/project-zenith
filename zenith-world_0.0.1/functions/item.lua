@@ -11,7 +11,7 @@ function zen.lib.item.isFluid(name)
   return false
 end
 
-zen.lib.item.exists(name)
+function zen.lib.item.exists(name)
   if data.raw.fluid[name] or data.raw.item[name] then return true end
   return false
 end

@@ -33,24 +33,49 @@ function zen.lib.recipe.removeProdLim(name)
   end
 end
 
+-- checks to see if a recipe is in a fluid category and if not then change it to be in one
+function zen.lib.recipe.fluidCapable(recipe, change)
+  change = change or false
+  if data.raw.recipe[recipe] then
+    if zen.lib.fluidCapableCategories[data.raw.recipe[recipe].category] ~= nil then
+      return true
+    end
+    if change then
+      if zen.lib.fluidUpgradeableCategories[recipe.category] ~= nil or data.raw.recipe[recipe].category == nil then
+        data.raw.recipe[recipe].category = "crafting-with-fluid"
+        return true
+      end
+    else return false end
+  else
+    log("recipe: \"" .. name .. "\" does not exist")
+  end
+end
+
 -- adds an ingredient to a recipe
-function.zen.lib.recipe.addIngredient(recipe, ingredient, amount, difficulty)
+function zen.lib.recipe.addIngredient(recipe, ingredient, amount, difficulty)
   if data.raw.recipe[recipe] and zen.lib.item.exists(ingredient) then
     amount = amount or 1
-    difficulty = difficulty or "normal"
     if not zen.lib.item.isFluid(ingredient) then
-      if data.raw.recipe[recipe].ingredients then
+      if data.raw.recipe[recipe].ingredients and difficulty == nil then
         table.insert(data.raw.recipe[recipe].ingredients, {
           ingredient, amount
         })
       else
-        table.insert(data.raw.recipe[recipe][difficulty].ingredients, {
+        table.insert(data.raw.recipe[recipe][difficulty or "normal"].ingredients, {
           ingredient, amount
         })
       end
     else
       if zen.lib.recipe.fluidCapable(recipe, true) then
-        { type = "fluid", name = ingredient, amount = amount }
+        if data.raw.recipe[recipe].ingredients and difficulty == nil then
+          table.insert(data.raw.recipe[recipe].ingredients, {
+            type = "fluid", name = ingredient, amount = amount
+          })
+        else
+          table.insert(data.raw.recipe[recipe][difficulty or "normal"].ingredients, {
+            type = "fluid", name = ingredient, amount = amount
+          })
+        end
       else
         log("recipe: \"" .. recipe .. "\" is not fluid capable")
       end
@@ -62,18 +87,4 @@ function.zen.lib.recipe.addIngredient(recipe, ingredient, amount, difficulty)
       log("item/fluid: \"" .. ingredient .. "\" does not exist")
     end
   end
-end
-
--- checks to see if a recipe is in a fluid category and if not then change it to be in one
-function zen.lib.recipe.fluidCapable(recipe, change)
-  change = change or false
-  if zen.lib.fluidCapableCategories[recipe.category] ~= nil then
-    return true
-  end
-  if change then
-    if zen.lib.fluidUpgradeableCategories[recipe.category] ~= nil then
-      recipe.category = "crafting-with-fluid"
-      return true
-    else return false
-  else return false
 end
