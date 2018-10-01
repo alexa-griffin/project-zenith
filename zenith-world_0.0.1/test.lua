@@ -2,6 +2,7 @@
 data:extend({
   zen.lib.recipe.duplicateFromRaw("fast-transport-belt", {
     name = "faster-transport-belt",
+    enabled = true,
   }),
 })
 
@@ -13,3 +14,8 @@ zen.lib.recipe.replaceIngredient("engine-unit", "iron-gear-wheel", "copper-plate
 zen.lib.recipe.addResult("processing-unit", "stone-brick")
 zen.lib.recipe.removeResult("uranium-processing", "uranium-238")
 zen.lib.recipe.replaceResult("basic-oil-processing", "light-oil", "water", { amount = 50 })
+
+
+-- tech
+zen.lib.tech.addPack("automation", "space-science-pack")
+zen.lib.tech.removePack("landfill", "science-pack-2")

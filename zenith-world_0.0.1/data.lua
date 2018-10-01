@@ -9,6 +9,7 @@ zen.settings.beta = settings.startup["zenith-beta"].value
 require("functions.lib")
 require("functions.item")
 require("functions.recipe")
+require("functions.tech")
 
 
 if zen.settings.debug then
