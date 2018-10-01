@@ -174,11 +174,9 @@ function zen.lib.recipe.addResult(recipe, ingredient, settings, difficulty)
           data.raw.recipe[recipe].icon = zen.lib.item.getIcon(prevResult.name).icon
           data.raw.recipe[recipe].icon_size = zen.lib.item.getIcon(prevResult.name).icon_size
         end
-
         if not data.raw.recipe[recipe].subgroup then
           data.raw.recipe[recipe].subgroup = zen.lib.item.getSubgroup(prevResult.name)
         end
-
 
         data.raw.recipe[recipe].results = {}
         table.insert(data.raw.recipe[recipe].results, zen.lib.spread({
@@ -226,5 +224,34 @@ function zen.lib.recipe.addResult(recipe, ingredient, settings, difficulty)
       log("item/fluid: \"" .. ingredient .. "\" does not exist")
     end
   end
+end
 
+
+function zen.lib.recipe.removeResult(recipe, result)
+  difficulty = difficulty or "normal"
+  if data.raw.recipe[recipe] and zen.lib.item.exists(result) then
+    if data.raw.recipe[recipe].result or data.raw.recipe[recipe].results.length == 1 then
+      log("cannot remove: \"" .. result .. "\" from recipe: \"" .. recipe .. "\" containing only one result")
+    else
+      if data.raw.recipe[recipe].results then
+        for i, item in ipairs(data.raw.recipe[recipe].results) do
+          if item.name == result then
+            table.remove(data.raw.recipe[recipe].results, i)
+          end
+        end
+      else
+        for i, item in ipairs(data.raw.recipe[recipe][difficulty].results) do
+          if item.name == result then
+            table.remove(data.raw.recipe[recipe][difficulty].results, i)
+          end
+        end
+      end
+    end
+  else
+    if not data.raw.recipe[recipe] then
+      log("recipe: \"" .. recipe .. "\" does not exist")
+    else
+      log("item/fluid: \"" .. result .. "\" does not exist")
+    end
+  end
 end
