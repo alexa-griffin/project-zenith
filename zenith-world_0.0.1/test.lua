@@ -19,3 +19,5 @@ zen.lib.recipe.replaceResult("basic-oil-processing", "light-oil", "water", { amo
 -- tech
 zen.lib.tech.addPack("automation", "space-science-pack")
 zen.lib.tech.removePack("landfill", "science-pack-2")
+zen.lib.tech.addRecipeUnlock("landfill", "centrifuge")
+zen.lib.tech.removeRecipeUnlock("nuclear-power", "centrifuge")

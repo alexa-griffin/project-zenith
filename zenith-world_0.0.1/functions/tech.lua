@@ -32,8 +32,34 @@ function zen.lib.tech.removePack(tech, pack)
       end
     end
   else
+    log("technology: \"" .. tech .. "\" does not exist")
+  end
+end
+
+function zen.lib.tech.addRecipeUnlock(tech, recipe)
+  if data.raw.technology[tech] and zen.lib.tech.isPack(pack) then
+    table.insert(data.raw.technology[tech].effects, {
+        type = "unlock-recipe",
+        recipe = recipe
+    })
+  else
     if not data.raw.technology[tech] then
       log("technology: \"" .. tech .. "\" does not exist")
+    else
+      log("recipe: \"" .. recipe .. "\" does not exist")
     end
+  end
+end
+
+
+function zen.lib.tech.removeRecipeUnlock(tech, recipe)
+  if data.raw.technology[tech] then
+    for i, item in ipairs(data.raw.technology[tech].effects) do
+      if item.recipe == recipe then
+        table.remove(data.raw.technology[tech].effects, i)
+      end
+    end
+  else
+    log("technology: \"" .. tech .. "\" does not exist")
   end
 end
