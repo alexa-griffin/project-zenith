@@ -115,6 +115,23 @@ function zen.lib.recipe.removeIngredient(recipe, ingredient, difficulty)
   end
 end
 
+-- replaces a ingredient in a recipe
+function zen.lib.recipe.replaceIngredient(recipe, old, new, amount, difficulty)
+  amount = amount or 1
+  if data.raw.recipe[recipe] and zen.lib.item.exists(new) and zen.lib.item.exists(old) then
+    zen.lib.recipe.addIngredient(recipe, new, amount, difficulty)
+    zen.lib.recipe.removeIngredient(recipe, old, difficulty)
+  else
+    if not data.raw.recipe[recipe] then
+      log("recipe: \"" .. recipe .. "\" does not exist")
+    elseif not zen.lib.item.exists(new) then
+      log("item/fluid: \"" .. new .. "\" does not exist")
+    else
+      log("item/fluid: \"" .. old .. "\" does not exist")
+    end
+  end
+end
+
 -- sets an ingredient's amount
 function zen.lib.recipe.setIngredientAmount(recipe, ingredient, amt, difficulty)
   difficulty = difficulty or "normal"
@@ -149,6 +166,7 @@ function zen.lib.recipe.setIngredientAmount(recipe, ingredient, amt, difficulty)
   end
 end
 
+-- adds a result to a recipe
 function zen.lib.recipe.addResult(recipe, ingredient, settings, difficulty)
   settings = settings or {
     amount = 1
@@ -226,8 +244,8 @@ function zen.lib.recipe.addResult(recipe, ingredient, settings, difficulty)
   end
 end
 
-
-function zen.lib.recipe.removeResult(recipe, result)
+-- removes a result from a recipe
+function zen.lib.recipe.removeResult(recipe, result, difficulty)
   difficulty = difficulty or "normal"
   if data.raw.recipe[recipe] and zen.lib.item.exists(result) then
     if data.raw.recipe[recipe].result or data.raw.recipe[recipe].results.length == 1 then
@@ -252,6 +270,23 @@ function zen.lib.recipe.removeResult(recipe, result)
       log("recipe: \"" .. recipe .. "\" does not exist")
     else
       log("item/fluid: \"" .. result .. "\" does not exist")
+    end
+  end
+end
+
+-- replaces a result in a recipe
+function zen.lib.recipe.replaceResult(recipe, old, new, settings, difficulty)
+  difficulty = difficulty or "normal"
+  if data.raw.recipe[recipe] and zen.lib.item.exists(new) and zen.lib.item.exists(old) then
+    zen.lib.recipe.addResult(recipe, new, settings, difficulty)
+    zen.lib.recipe.removeResult(recipe, old, settings, difficulty)
+  else
+    if not data.raw.recipe[recipe] then
+      log("recipe: \"" .. recipe .. "\" does not exist")
+    elseif not zen.lib.item.exists(new) then
+      log("item/fluid: \"" .. new .. "\" does not exist")
+    else
+      log("item/fluid: \"" .. old .. "\" does not exist")
     end
   end
 end
