@@ -34,7 +34,7 @@ function zen.lib.recipe.removeProdLim(name)
 end
 
 -- checks to see if a recipe is in a fluid category and if not then change it to be in one
-function zen.lib.recipe.fluidCapable(recipe, change)
+function zen.lib.recipe.isFluidCapable(recipe, change)
   change = change or false
   if data.raw.recipe[recipe] then
     if zen.lib.fluidCapableCategories[data.raw.recipe[recipe].category] ~= nil then
@@ -66,7 +66,7 @@ function zen.lib.recipe.addIngredient(recipe, ingredient, amount, difficulty)
         })
       end
     else
-      if zen.lib.recipe.fluidCapable(recipe, true) then
+      if zen.lib.recipe.isFluidCapable(recipe, true) then
         if data.raw.recipe[recipe].ingredients and difficulty == nil then
           table.insert(data.raw.recipe[recipe].ingredients, {
             type = "fluid", name = ingredient, amount = amount
@@ -87,4 +87,144 @@ function zen.lib.recipe.addIngredient(recipe, ingredient, amount, difficulty)
       log("item/fluid: \"" .. ingredient .. "\" does not exist")
     end
   end
+end
+
+-- removes an ingredient from a recipe
+function zen.lib.recipe.removeIngredient(recipe, ingredient, difficulty)
+  difficulty = difficulty or "normal"
+  if data.raw.recipe[recipe] and zen.lib.item.exists(ingredient) then
+    if data.raw.recipe[recipe].ingredients then
+      for i, item in ipairs(data.raw.recipe[recipe].ingredients) do
+        if item[1] == ingredient or item.name == ingredient then
+          table.remove(data.raw.recipe[recipe].ingredients, i)
+        end
+      end
+    else
+      for i, item in ipairs(data.raw.recipe[recipe][difficulty].ingredients) do
+        if item[1] == ingredient or item.name == ingredient then
+          table.remove(data.raw.recipe[recipe][difficulty].ingredients, i)
+        end
+      end
+    end
+  else
+    if not data.raw.recipe[recipe] then
+      log("recipe: \"" .. recipe .. "\" does not exist")
+    else
+      log("item/fluid: \"" .. ingredient .. "\" does not exist")
+    end
+  end
+end
+
+-- sets an ingredient's amount
+function zen.lib.recipe.setIngredientAmount(recipe, ingredient, amt, difficulty)
+  difficulty = difficulty or "normal"
+  if data.raw.recipe[recipe] and zen.lib.item.exists(ingredient) then
+    if data.raw.recipe[recipe].ingredients then
+      for i, item in ipairs(data.raw.recipe[recipe].ingredients) do
+        if item[1] == ingredient or item.name == ingredient then
+          if item.name == ingredient then
+            data.raw.recipe[recipe].ingredients[i].amount = amt
+          else
+            data.raw.recipe[recipe].ingredients[i][2] = amt
+          end
+        end
+      end
+    else
+      for i, item in ipairs(data.raw.recipe[recipe][difficulty].ingredients) do
+        if item[1] == ingredient or item.name == ingredient then
+          if item.name == ingredient then
+            data.raw.recipe[recipe][difficulty].ingredients[i].amount = amt
+          else
+            data.raw.recipe[recipe][difficulty].ingredients[i][2] = amt
+          end
+        end
+      end
+    end
+  else
+    if not data.raw.recipe[recipe] then
+      log("recipe: \"" .. recipe .. "\" does not exist")
+    else
+      log("item/fluid: \"" .. ingredient .. "\" does not exist")
+    end
+  end
+end
+
+function zen.lib.recipe.addResult(recipe, ingredient, settings, difficulty)
+  settings = settings or {
+    amount = 1
+  }
+  difficulty = difficulty or "normal"
+  if data.raw.recipe[recipe] and zen.lib.item.exists(ingredient) then
+    if not data.raw.recipe[recipe][difficulty] then
+      if data.raw.recipe[recipe].results then
+        table.insert(data.raw.recipe[recipe].results, zen.lib.spread({
+          name = ingredient,
+          type = zen.lib.item.getType(ingredient)
+        }, settings))
+      else
+        local prevResult = {
+          name = data.raw.recipe[recipe].result,
+          amount = data.raw.recipe[recipe].result_amount or 1
+        }
+
+        data.raw.recipe[recipe].result = nil
+        data.raw.recipe[recipe].result_amount = nil
+
+        if not data.raw.recipe[recipe].icon then
+          data.raw.recipe[recipe].icon = zen.lib.item.getIcon(prevResult.name).icon
+          data.raw.recipe[recipe].icon_size = zen.lib.item.getIcon(prevResult.name).icon_size
+        end
+
+        if not data.raw.recipe[recipe].subgroup then
+          data.raw.recipe[recipe].subgroup = zen.lib.item.getSubgroup(prevResult.name)
+        end
+
+
+        data.raw.recipe[recipe].results = {}
+        table.insert(data.raw.recipe[recipe].results, zen.lib.spread({
+          name = ingredient,
+          type = zen.lib.item.getType(ingredient)
+        }, settings))
+        table.insert(data.raw.recipe[recipe].results, prevResult)
+      end
+    else
+      if data.raw.recipe[recipe][difficulty].results then
+        table.insert(data.raw.recipe[recipe][difficulty].results, zen.lib.spread({
+          name = ingredient,
+          type = zen.lib.item.getType(ingredient)
+        }, settings))
+      else
+        local prevResult = {
+          name = data.raw.recipe[recipe][difficulty].result,
+          amount = data.raw.recipe[recipe][difficulty].result_amount or 1
+        }
+
+        if not data.raw.recipe[recipe].icon then
+          data.raw.recipe[recipe].icon = zen.lib.item.getIcon(prevResult.name).icon
+          data.raw.recipe[recipe].icon_size = zen.lib.item.getIcon(prevResult.name).icon_size
+        end
+
+        if not data.raw.recipe[recipe].subgroup then
+          data.raw.recipe[recipe].subgroup = zen.lib.item.getSubgroup(prevResult.name)
+        end
+
+        data.raw.recipe[recipe][difficulty].result = nil
+        data.raw.recipe[recipe][difficulty].result_amount = nil
+
+        data.raw.recipe[recipe][difficulty].results = {}
+        table.insert(data.raw.recipe[recipe][difficulty].results, zen.lib.spread({
+          name = ingredient,
+          type = zen.lib.item.getType(ingredient)
+        }, settings))
+        table.insert(data.raw.recipe[recipe][difficulty].results, prevResult)
+      end
+    end
+  else
+    if not data.raw.recipe[recipe] then
+      log("recipe: \"" .. recipe .. "\" does not exist")
+    else
+      log("item/fluid: \"" .. ingredient .. "\" does not exist")
+    end
+  end
+
 end

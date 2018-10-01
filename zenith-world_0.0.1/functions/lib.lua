@@ -21,3 +21,8 @@ function zen.lib.log(logee)
     log( serpent.block( logee, { comment = false, numformat = '%1.8g' } ) )
   else log(logee) end
 end
+
+function zen.lib.spread(target, other)
+  for k,v in pairs(other) do target[k] = v end
+  return target
+end
