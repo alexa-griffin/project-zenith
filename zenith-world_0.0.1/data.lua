@@ -5,6 +5,7 @@ if not zen.lib then zen.lib = {} end
 
 zen.settings.debug = settings.startup["zenith-debug"].value
 zen.settings.beta = settings.startup["zenith-beta"].value
+zen.settings.recolor_ore = settings.startup["zenith-recolor-ore"].value
 
 require("functions.lib")
 require("functions.item")
@@ -12,6 +13,4 @@ require("functions.recipe")
 require("functions.tech")
 
 
-if zen.settings.debug then
-  require("test")
-end
+require("test")
