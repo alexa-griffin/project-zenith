@@ -12,5 +12,6 @@ require("functions.item")
 require("functions.recipe")
 require("functions.tech")
 
+require("prototypes.item")
 
 require("test")
