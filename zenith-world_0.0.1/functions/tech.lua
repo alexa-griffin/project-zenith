@@ -77,3 +77,29 @@ function zen.lib.tech.replaceRecipeUnlock(tech, old, new)
     end
   end
 end
+
+function zen.lib.tech.addPrereq(tech, prereq)
+  if data.raw.technology[tech] and data.raw.technology[prereq] then
+    if not data.raw.technology[tech].prerequisites then data.raw.technology[tech].prerequisites = {} end
+    table.insert(data.raw.technology[tech].prerequisites)
+  else
+    if not data.raw.technology[tech] then
+      log("technology: \"" .. tech .. "\" does not exist")
+    else
+      log("technology: \"" .. prereq .. "\" does not exist")
+    end
+  end
+end
+
+function zen.lib.tech.removePrereq(tech, prereq)
+  if data.raw.technology[tech] then
+    if not data.raw.technology[tech].prerequisites then return end
+    for i, item in ipairs(data.raw.technology[tech].prerequisites) do
+      if item == prereq then
+        table.remove(data.raw.technology[tech].prerequisites, i)
+      end
+    end
+  else
+    log("technology: \"" .. tech .. "\" does not exist")
+  end
+end
