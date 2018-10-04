@@ -31,7 +31,7 @@ data:extend({
   }),
   zen.lib.recipe.duplicateFromRaw("copper-plate", {
     ingredients = {
-      { "coal", 2 }, -- TODO: make coke
+      { "coke", 2 },
       { "iron-plate", 5 }
     },
     enabled = false,
