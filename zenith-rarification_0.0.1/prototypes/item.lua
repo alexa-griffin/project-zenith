@@ -11,4 +11,17 @@ data:extend({
     name = "scandium-ore",
     icon = "__zenith-rarification__/graphics/icons/scandium-ore.png"
   }),
+
+  zen.lib.item.duplicateFromRaw("iron-plate", {
+    name = "scandium-plate",
+    icon = "__zenith-rarification__/graphics/icons/scandium-plate.png"
+  }),
+  zen.lib.item.duplicateFromRaw("iron-plate", {
+    name = "tin-plate",
+    icon = "__zenith-rarification__/graphics/icons/tin-plate.png"
+  }),
+  zen.lib.item.duplicateFromRaw("iron-plate", {
+    name = "gold-plate",
+    icon = "__zenith-rarification__/graphics/icons/gold-plate.png"
+  }),
 })
