@@ -2,19 +2,19 @@ data:extend({
   zen.lib.duplicateFromRaw("fluid", "heavy-oil", {
     name = "ammonia",
     icon = "__zenith-chemistry__/graphics/icons/ammonia.png",
-    base_color = { r = 0.4, g = 0.4, b = 0.4},
-    flow_color = { r = 0.8, g = 0.8, b = 0.8},
+    base_color = zen.lib.hexToColor("#4c4c4c"),
+    flow_color = zen.lib.hexToColor("#d8d8d8"),
   }),
   zen.lib.duplicateFromRaw("fluid", "heavy-oil", {
     name = "cyanide",
     icon = "__zenith-chemistry__/graphics/icons/cyanide.png",
-    base_color = { r = 0.8, g = 0.4, b = 0.4 },
-    flow_color = { r = 0.8, g = 0.8, b = 0.8 },
+    base_color = zen.lib.hexToColor("#294f48"),
+    flow_color = zen.lib.hexToColor("#22d6b5"),
   }),
   zen.lib.duplicateFromRaw("fluid", "heavy-oil", {
-    name = "syn-natural-gas",
-    icon = "__zenith-chemistry__/graphics/icons/cyanide.png",
-    base_color = { r = 1, g = 0.827, b = 0.45 },
-    flow_color = { r = 0.8, g = 0.8, b = 0.8 },
+    name = "natural-gas",
+    icon = "__zenith-chemistry__/graphics/icons/natural-gas.png",
+    base_color = zen.lib.hexToColor("#665b0a"),
+    flow_color = zen.lib.hexToColor("#c4ae0d"),
   }),
 })
