@@ -31,6 +31,3 @@ data:extend({
     energy_required = 12.5
   })
 })
-
-zen.lib.recipe.replaceIngredient("plastic-bar", "petroleum", "raw-polyethylene")
-zen.lib.recipe.replaceIngredient("sulfur", "water", "ethylene", 20)
