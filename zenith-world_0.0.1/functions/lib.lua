@@ -51,6 +51,7 @@ function zen.lib.hexToColor(hex)
       r = tonumber("0x" .. hex:sub(1, 1) * 17) / 255,
       g = tonumber("0x" .. hex:sub(2, 2) * 17) / 255,
       b = tonumber("0x" .. hex:sub(3, 3) * 17) / 255
+    }
   else
     return {
       r = tonumber("0x" .. hex:sub(1, 2)) / 255,
