@@ -2,15 +2,17 @@ data:extend({
   zen.lib.recipe.duplicateFromRaw("stone-brick", {
     name = "coke",
     ingredients = {{ "coal", 2 }},
+    result = "coke",
     result_count = 2,
     energy_required = 1.5
   }, true),
 
-  zen.lib.recipe.duplicateFromRaw("basic-oil-processing", {
+  zen.lib.recipe.duplicateFromRaw("coal-liquefaction", {
     name = "natural-gas-synthesis",
     icon = "__zenith-chemistry__/graphics/icons/natural-gas-synthesis.png",
     ingredients = {
       { type = "fluid", name = "crude-oil", amount = 100 },
+      { type = "item", name = "sulfur", amount = 5 },
       { type = "fluid", name = "petroleum-gas", amount = 100 }
     },
     results = {
@@ -19,12 +21,13 @@ data:extend({
     energy_required = 7.5,
   }, true),
 
-  zen.lib.recipe.duplicateFromRaw("basic-oil-processing", {
+  zen.lib.recipe.duplicateFromRaw("coal-liquefaction", {
     name = "natural-gas-processing",
     icon = "__zenith-chemistry__/graphics/icons/natural-gas-processing.png",
     ingredients = {
       { type = "fluid", name = "natural-gas", amount = 30 },
-      { type = "fluid", name = "petroleum-gas", amount = 30 }
+      { type = "item", name = "coke", amount = 5 },
+      { type = "fluid", name = "water", amount = 30 }
     },
     results = {
       { type = "fluid", name = "benzene", amount = 10 },
@@ -46,7 +49,7 @@ data:extend({
     energy_required = 12.5
   }, true),
 
-  zen.lib.recipe.duplicateFromRaw("sulfur", {
+  zen.lib.recipe.duplicateFromRaw("sulfuric-acid", {
     name = "ammonia-synthesis",
     ingredients = {
       { type = "fluid", name = "methane", amount = 20 },
@@ -58,7 +61,7 @@ data:extend({
     energy_required = 2.5
   }, true),
 
-  zen.lib.recipe.duplicateFromRaw("sulfur", {
+  zen.lib.recipe.duplicateFromRaw("sulfuric-acid", {
     name = "cyanide",
     ingredients = {
       { type = "item", name = "coke", amount = 4 },

@@ -41,8 +41,17 @@ function zen.lib.spread(target, other)
   return target
 end
 
-
-
+-- changes raw data in bulk
+function zen.lib.modifyRaw(type, name, overrides)
+  local new = {}
+  if data.raw[type][name] then
+    for key, val in pairs(overrides) do
+      data.raw[type][name] = val
+    end
+  else
+    log(type .. ": \"" .. name .. "\" does not exist")
+  end
+end
 
 function zen.lib.hexToColor(hex)
   local hex = hex:gsub("#","")

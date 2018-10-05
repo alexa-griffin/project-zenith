@@ -116,3 +116,7 @@ function zen.lib.tech.setAll(key, value, filters)
     zen.lib.doAll(data.raw["technology"], "name", filters, setFunc)
   end
 end
+
+function zen.lib.tech.modifyRaw(name, overrides)
+  zen.lib.modifyRaw("technology", name, overrides)
+end

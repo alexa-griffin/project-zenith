@@ -4,10 +4,12 @@ data:extend({
     fuel_value = "16MJ",
     icon = "__zenith-chemistry__/graphics/icons/coke.png",
   }),
+
   zen.lib.item.duplicateFromRaw("plastic-bar", {
     name = "raw-polyethylene",
     icon = "__zenith-chemistry__/graphics/icons/raw-polyethylene.png",
   }),
+  
   zen.lib.item.duplicateFromRaw("rocket-fuel", {
     name = "ethylbenzene",
     icon = "__zenith-chemistry__/graphics/icons/ethylbenzene.png",

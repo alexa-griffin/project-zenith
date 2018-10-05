@@ -303,3 +303,7 @@ function zen.lib.recipe.setAll(key, value, filters)
     zen.lib.doAll(data.raw["recipe"], "name", filters, setFunc)
   end
 end
+
+function zen.lib.recipe.modifyRaw(name, overrides)
+  zen.lib.modifyRaw("recipe", name, overrides)
+end

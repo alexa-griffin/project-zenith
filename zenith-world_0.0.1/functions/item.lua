@@ -63,3 +63,7 @@ function zen.lib.item.setAll(key, value, filters)
     zen.lib.doAll(data.raw["item-with-entity-data"], "name", filters, setFunc)
   end
 end
+
+function zen.lib.item.modifyRaw(name, overrides)
+  zen.lib.modifyRaw("item", name, overrides)
+end
