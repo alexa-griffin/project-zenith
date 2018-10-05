@@ -32,7 +32,7 @@ data:extend({
         recipe = "cyanide"
       }
     },
-    icon = "__zenith-chemistry__/graphics/technology/basic-chemistry.png"
+    icon = "__zenith-chemistry__/graphics/technology/basic-chemistry.png",
     prerequisites = { "advanced-oil-processing" }
   })
 })

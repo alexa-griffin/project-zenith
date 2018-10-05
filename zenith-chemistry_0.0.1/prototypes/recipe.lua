@@ -8,6 +8,7 @@ data:extend({
 
   zen.lib.recipe.duplicateFromRaw("basic-oil-processing", {
     name = "natural-gas-synthesis",
+    icon = "__zenith-chemistry__/graphics/icons/natural-gas-synthesis.png",
     ingredients = {
       { type = "fluid", name = "crude-oil", amount = 100 },
       { type = "fluid", name = "petroleum-gas", amount = 100 }
@@ -15,11 +16,12 @@ data:extend({
     results = {
       { type = "fluid", name = "natural-gas", amount = 100 }
     },
-    energy_required = 7.5
+    energy_required = 7.5,
   }, true),
 
   zen.lib.recipe.duplicateFromRaw("basic-oil-processing", {
     name = "natural-gas-processing",
+    icon = "__zenith-chemistry__/graphics/icons/natural-gas-processing.png",
     ingredients = {
       { type = "fluid", name = "natural-gas", amount = 30 },
       { type = "fluid", name = "petroleum-gas", amount = 30 }
@@ -42,7 +44,7 @@ data:extend({
       { "ethylbenzene", 2 }
     },
     energy_required = 12.5
-  }), true,
+  }, true),
 
   zen.lib.recipe.duplicateFromRaw("sulfur", {
     name = "ammonia-synthesis",
@@ -54,7 +56,7 @@ data:extend({
       { type = "fluid", name = "ammonia", amount = 20 },
     },
     energy_required = 2.5
-  }), true,
+  }, true),
 
   zen.lib.recipe.duplicateFromRaw("sulfur", {
     name = "cyanide",

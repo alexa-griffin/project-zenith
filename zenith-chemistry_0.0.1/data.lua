@@ -1,6 +1,4 @@
 if not zen then zen = {} end
 if not zen.chemistry then zen.chemistry = {} end
 
-log( serpent.block( zen, { comment = false, numformat = '%1.8g' } ) )
-
-require("prototypes.fluid")
+data.raw.fluid["petroleum-gas"].icon = "__zenith-chemistry__/graphics/icons/petroleum-gas.png"
