@@ -17,4 +17,28 @@ data:extend({
     base_color = zen.lib.hexToColor("#665b0a"),
     flow_color = zen.lib.hexToColor("#c4ae0d"),
   }),
+  zen.lib.duplicateFromRaw("fluid", "heavy-oil", {
+    name = "benzene",
+    icon = "__zenith-chemistry__/graphics/icons/benzene.png",
+    base_color = zen.lib.hexToColor("#191f28"),
+    flow_color = zen.lib.hexToColor("#c4daff"),
+  }),
+  zen.lib.duplicateFromRaw("fluid", "heavy-oil", {
+    name = "propene",
+    icon = "__zenith-chemistry__/graphics/icons/propene.png",
+    base_color = zen.lib.hexToColor("#bc91e2"),
+    flow_color = zen.lib.hexToColor("#c4daff"),
+  }),
+  zen.lib.duplicateFromRaw("fluid", "heavy-oil", {
+    name = "methane",
+    icon = "__zenith-chemistry__/graphics/icons/methane.png",
+    base_color = zen.lib.hexToColor("#332121"),
+    flow_color = zen.lib.hexToColor("#efa5a5"),
+  }),
+  zen.lib.duplicateFromRaw("fluid", "heavy-oil", {
+    name = "ethylene",
+    icon = "__zenith-chemistry__/graphics/icons/ethylene.png",
+    base_color = zen.lib.hexToColor("#202115"),
+    flow_color = zen.lib.hexToColor("#eaefa5"),
+  }),
 })

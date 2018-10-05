@@ -60,3 +60,8 @@ function zen.lib.hexToColor(hex)
     }
   end
 end
+
+-- thank you bob
+function zen.lib.getBeltSpeed(ips)
+  return ips * 3/1280 --0.00234375
+end
