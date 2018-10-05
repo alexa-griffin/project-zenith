@@ -25,8 +25,8 @@ data:extend({
       { type = "fluid", name = "petroleum-gas", amount = 30 }
     },
     results = {
-      { type = "fluid", name = "benzene", amount = 10 }
-      { type = "fluid", name = "propene", amount = 20 }
+      { type = "fluid", name = "benzene", amount = 10 },
+      { type = "fluid", name = "propene", amount = 20 },
       { type = "fluid", name = "methane", amount = 30 }
     },
     energy_required = 12.5

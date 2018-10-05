@@ -1,6 +1,6 @@
 data:extend({
   zen.lib.tech.duplicateFromRaw("oil-processing", {
-    name = "natural-gas-processing"
+    name = "natural-gas-processing",
     effects =
     {
       {
@@ -14,11 +14,11 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "ethylbenzene"
-      }
+      },
       {
         type = "unlock-recipe",
         recipe = "ammonia"
-      }
+      },
       {
         type = "unlock-recipe",
         recipe = "cyanide"
