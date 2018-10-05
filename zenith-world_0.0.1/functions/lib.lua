@@ -16,6 +16,20 @@ function zen.lib.duplicateFromRaw(type, name, overrides)
   return new
 end
 
+function zen.lib.doAll(target, func)
+  for k, v in ipairs(target) do
+    func(v, k, target)
+  end
+end
+
+function zen.lib.doAllFilter(target, tester, values, func)
+  for k, v in ipairs(target) do
+    if values[target[k][tester]] or target[k][tester] == values then
+      func(v, k, target)
+    end
+  end
+end
+
 function zen.lib.log(logee)
   if type(logee) == "table" then
     log( serpent.block( logee, { comment = false, numformat = '%1.8g' } ) )
@@ -28,12 +42,14 @@ function zen.lib.spread(target, other)
 end
 
 
+
+
 function zen.lib.hexToColor(hex)
   local hex = hex:gsub("#","")
   if hex:len() == 3 then
     return {
-      r = tonumber("0x" .. hex:sub(1, 1) * 17) / 255, 
-      g = tonumber("0x" .. hex:sub(2, 2) * 17) / 255, 
+      r = tonumber("0x" .. hex:sub(1, 1) * 17) / 255,
+      g = tonumber("0x" .. hex:sub(2, 2) * 17) / 255,
       b = tonumber("0x" .. hex:sub(3, 3) * 17) / 255
   else
     return {
