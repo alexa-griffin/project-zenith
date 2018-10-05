@@ -47,3 +47,19 @@ function zen.lib.item.getSubgroup(item)
     log("item/fluid: \"" .. item .. "\" does not exist")
   end
 end
+
+function zen.lib.item.setAll(key, value, filters)
+  function setFunc(toSet)
+    toSet[key] = value
+  end
+
+  if not filters then
+    zen.lib.doAll(data.raw["items"], setFunc)
+    zen.lib.doAll(data.raw["tools"], setFunc)
+    zen.lib.doAll(data.raw["item-with-entity-data"], setFunc)
+  else
+    zen.lib.doAll(data.raw["items"], "name", filters, setFunc)
+    zen.lib.doAll(data.raw["tools"], "name", filters, setFunc)
+    zen.lib.doAll(data.raw["item-with-entity-data"], "name", filters, setFunc)
+  end
+end

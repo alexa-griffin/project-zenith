@@ -103,3 +103,16 @@ function zen.lib.tech.removePrereq(tech, prereq)
     log("technology: \"" .. tech .. "\" does not exist")
   end
 end
+
+
+function zen.lib.tech.setAll(key, value, filters)
+  function setFunc(toSet)
+    toSet[key] = value
+  end
+
+  if not filters then
+    zen.lib.doAll(data.raw["technology"], setFunc)
+  else
+    zen.lib.doAll(data.raw["technology"], "name", filters, setFunc)
+  end
+end

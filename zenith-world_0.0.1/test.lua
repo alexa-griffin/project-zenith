@@ -23,5 +23,7 @@ if zen.settings.debug then
   zen.lib.tech.addRecipeUnlock("landfill", "centrifuge")
   zen.lib.tech.removeRecipeUnlock("nuclear-power", "centrifuge")
   zen.lib.tech.replaceRecipeUnlock("automation", "long-inserter", "iron-gear-wheel")
+  zen.lib.tech.setAll("icon", "__base__/graphics/technology/automation.png")
+  zen.lib.tech.setAll("icon", "__base__/graphics/technology/optics.png", { "optics", "oil-processing" })
 
 end

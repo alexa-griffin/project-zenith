@@ -18,14 +18,14 @@ end
 
 function zen.lib.doAll(target, func)
   for k, v in ipairs(target) do
-    func(v, k, target)
+    func(target[v], v, k, target)
   end
 end
 
 function zen.lib.doAllFilter(target, tester, values, func)
   for k, v in ipairs(target) do
     if values[target[k][tester]] or target[k][tester] == values then
-      func(v, k, target)
+      func(target[v], v, k, target)
     end
   end
 end

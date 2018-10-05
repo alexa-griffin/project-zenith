@@ -290,3 +290,16 @@ function zen.lib.recipe.replaceResult(recipe, old, new, settings, difficulty)
     end
   end
 end
+
+
+function zen.lib.recipe.setAll(key, value, filters)
+  function setFunc(toSet)
+    toSet[key] = value
+  end
+
+  if not filters then
+    zen.lib.doAll(data.raw["recipe"], setFunc)
+  else
+    zen.lib.doAll(data.raw["recipe"], "name", filters, setFunc)
+  end
+end
