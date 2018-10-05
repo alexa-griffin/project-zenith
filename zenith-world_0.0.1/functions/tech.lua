@@ -81,7 +81,7 @@ end
 function zen.lib.tech.addPrereq(tech, prereq)
   if data.raw.technology[tech] and data.raw.technology[prereq] then
     if not data.raw.technology[tech].prerequisites then data.raw.technology[tech].prerequisites = {} end
-    table.insert(data.raw.technology[tech].prerequisites)
+    table.insert(data.raw.technology[tech].prerequisites, prereq)
   else
     if not data.raw.technology[tech] then
       log("technology: \"" .. tech .. "\" does not exist")
