@@ -29,5 +29,16 @@ data:extend({
       { type = "fluid", name = "methane", amount = 30 }
     },
     energy_required = 12.5
+  }),
+
+  zen.lib.recipe.duplicateFromRaw("sulfur", {
+    name = "ethylbenzene",
+    ingredients = {
+      { type = "fluid", name = "benzene", amount = 20 },
+      { type = "fluid", name = "ethylene", amount = 20 }
+    },
+    result = "ethylbenzene",
+    result_amount = 2,
+    energy_required = 12.5
   })
 })

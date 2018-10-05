@@ -1,17 +1,30 @@
 data:extend({
   zen.lib.tech.duplicateFromRaw("oil-processing", {
-    name = "syn-gas-processing"
+    name = "natural-gas-processing"
     effects =
     {
       {
         type = "unlock-recipe",
-        recipe = "syn-gas"
+        recipe = "natural-gas"
       },
       {
         type = "unlock-recipe",
-        recipe = "syn-processing"
+        recipe = "natural-processing"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "ethylbenzene"
+      }
+      {
+        type = "unlock-recipe",
+        recipe = "ammonia"
+      }
+      {
+        type = "unlock-recipe",
+        recipe = "cyanide"
       }
     },
+    prerequisites = { "advanced-oil-processing" }
   })
 })
 
