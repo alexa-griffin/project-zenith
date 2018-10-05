@@ -27,6 +27,3 @@ data:extend({
     prerequisites = { "advanced-oil-processing" }
   })
 })
-
-zen.lib.tech.addPack("sulfur-processing", "science-pack-3")
-zen.lib.tech.addPrereq("sulfur-processing", "advanced-oil-processing")
