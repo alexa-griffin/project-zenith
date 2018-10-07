@@ -46,7 +46,7 @@ function zen.lib.modifyRaw(type, name, overrides)
   local new = {}
   if data.raw[type][name] then
     for key, val in pairs(overrides) do
-      data.raw[type][name] = val
+      data.raw[type][name][key] = val
     end
   else
     log(type .. ": \"" .. name .. "\" does not exist")

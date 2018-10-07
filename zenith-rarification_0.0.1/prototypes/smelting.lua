@@ -1,17 +1,5 @@
 data:extend({
   zen.lib.recipe.duplicateFromRaw("copper-plate", {
-    ingredients = {{ "cupric-ore", 1 }},
-    result = "copper-plate",
-    result_count = 1,
-  }, true),
-
-  zen.lib.recipe.duplicateFromRaw("iron-plate", {
-    ingredients = {{ "ferric-ore", 1 }},
-    result = "iron-plate",
-    result_count = 1,
-  }, true),
-
-  zen.lib.recipe.duplicateFromRaw("copper-plate", {
     ingredients = {{ "tin-ore", 1 }},
     enabled = false,
     result = "tin-plate",
@@ -39,10 +27,36 @@ data:extend({
   }, true),
 })
 
-zen.lib.recipe.duplicateFromRaw("steel-plate", {
-  ingredients = {
-    { "coke", 2 },
-    { "iron-plate", 5 }
+zen.lib.recipe.modifyRaw("steel-plate", {
+  normal = {
+    enabled = false,
+    energy_required = 17.5,
+    ingredients = {
+      {"iron-plate", 5},
+      {"coke", 2}
+    },
+    result = "steel-plate",
+    result_count = 2
   },
-  result_count = 2,
+  expensive = {
+    enabled = false,
+    energy_required = 17.5,
+    ingredients = {
+      {"iron-plate", 5},
+      {"coke", 2}
+    },
+    result = "steel-plate",
+  }
+})
+
+zen.lib.recipe.modifyRaw("copper-plate", {
+  ingredients = {{ "cupric-ore", 1 }},
+  result = "copper-plate",
+  result_count = 1,
+})
+
+zen.lib.recipe.modifyRaw("iron-plate", {
+  ingredients = {{ "ferric-ore", 1 }},
+  result = "iron-plate",
+  result_count = 1,
 })

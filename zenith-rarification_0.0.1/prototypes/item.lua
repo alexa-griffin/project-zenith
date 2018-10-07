@@ -24,4 +24,8 @@ data:extend({
     name = "gold-plate",
     icon = "__zenith-rarification__/graphics/icons/gold-plate.png"
   }),
+  zen.lib.item.duplicateFromRaw("iron-plate", {
+    name = "bronze-plate",
+    icon = "__zenith-rarification__/graphics/icons/bronze-plate.png"
+  }),
 })
