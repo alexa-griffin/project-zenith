@@ -16,6 +16,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "cupric-ore-washing"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "cupric-waste-treatment"
+      },
     },
     unit =
     {
@@ -69,6 +73,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "ferric-ore-washing"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "cupric-waste-treatment"
       },
     },
     unit =
