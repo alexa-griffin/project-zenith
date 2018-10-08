@@ -15,6 +15,18 @@ data:extend({
         type = "unlock-recipe",
         recipe = "ethylbenzene"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "solid-fuel-from-methane"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "solid-fuel-from-benzene"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "solid-fuel-from-propene"
+      },
     },
     prerequisites = { "advanced-oil-processing" }
   }),

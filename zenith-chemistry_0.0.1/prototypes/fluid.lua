@@ -41,4 +41,10 @@ data:extend({
     base_color = zen.lib.hexToColor("#202115"),
     flow_color = zen.lib.hexToColor("#eaefa5"),
   }),
+  zen.lib.duplicateFromRaw("fluid", "heavy-oil", {
+    name = "ethylbenzene",
+    icon = "__zenith-chemistry__/graphics/icons/ethylbenzene.png",
+    base_color = zen.lib.hexToColor("#1c1c1c"),
+    flow_color = zen.lib.hexToColor("#d1d1d1"),
+  }),
 })

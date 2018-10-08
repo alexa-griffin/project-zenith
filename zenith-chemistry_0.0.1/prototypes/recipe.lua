@@ -16,7 +16,7 @@ data:extend({
       { type = "fluid", name = "petroleum-gas", amount = 100 }
     },
     results = {
-      { type = "fluid", name = "natural-gas", amount = 100 }
+      { type = "fluid", name = "natural-gas", amount = 200 }
     },
     energy_required = 7.5,
   }, true),
@@ -44,7 +44,7 @@ data:extend({
       { type = "fluid", name = "ethylene", amount = 20 }
     },
     results = {
-      { "ethylbenzene", 2 }
+      { type = "fluid", name = "ethylbenzene", amount = 20 }
     },
     energy_required = 12.5
   }, true),
@@ -59,6 +59,37 @@ data:extend({
       { type = "fluid", name = "ammonia", amount = 20 },
     },
     energy_required = 2.5
+  }, true),
+
+
+  zen.lib.recipe.duplicateFromRaw("solid-fuel-from-heavy-oil", {
+    name = "solid-fuel-from-benzene",
+    ingredients = {
+      { type = "fluid", name = "benzene", amount = 5 },
+    },
+    results = {
+      { type = "item", name = "solid-fuel", amount = 1 }
+    },
+  }, true),
+
+  zen.lib.recipe.duplicateFromRaw("solid-fuel-from-heavy-oil", {
+    name = "solid-fuel-from-methane",
+    ingredients = {
+      { type = "fluid", name = "methane", amount = 10 },
+    },
+    results = {
+      { type = "item", name = "solid-fuel", amount = 1 }
+    },
+  }, true),
+
+  zen.lib.recipe.duplicateFromRaw("solid-fuel-from-heavy-oil", {
+    name = "solid-fuel-from-propene",
+    ingredients = {
+      { type = "fluid", name = "propene", amount = 10 },
+    },
+    results = {
+      { type = "item", name = "solid-fuel", amount = 1 }
+    },
   }, true),
 
   zen.lib.recipe.duplicateFromRaw("sulfuric-acid", {
