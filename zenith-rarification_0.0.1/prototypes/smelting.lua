@@ -2,6 +2,7 @@ data:extend({
   zen.lib.recipe.duplicateFromRaw("copper-plate", {
     name = "tin-plate",
     ingredients = {{ "tin-ore", 1 }},
+    energy_required = 1.5,
     enabled = false,
     result = "tin-plate",
   }, true),
@@ -9,6 +10,7 @@ data:extend({
   zen.lib.recipe.duplicateFromRaw("copper-plate", {
     name = "gold-plate",
     ingredients = {{ "gold-ore", 1 }},
+    energy_required = 6.5,
     enabled = false,
     result = "gold-plate",
   }, true),
@@ -16,6 +18,7 @@ data:extend({
   zen.lib.recipe.duplicateFromRaw("copper-plate", {
     name = "scandium-plate",
     ingredients = {{ "scandium-ore", 1 }},
+    energy_required = 8.5,
     enabled = false,
     result = "scandium-plate",
   }, true),
