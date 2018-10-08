@@ -61,7 +61,6 @@ data:extend({
     energy_required = 2.5
   }, true),
 
-
   zen.lib.recipe.duplicateFromRaw("solid-fuel-from-heavy-oil", {
     name = "solid-fuel-from-benzene",
     icon = "__zenith-chemistry__/graphics/icons/solid-fuel-from-benzene.png",
@@ -105,5 +104,18 @@ data:extend({
       { type = "fluid", name = "cyanide", amount = 20 },
     },
     energy_required = 2.5
-  }, true)
+  }, true),
+
+  zen.lib.recipe.duplicateFromRaw("plastic-bar", {
+    name = "raw-polyethylene",
+    ingredients = {
+      { type = "fluid", name = "ethylene", amount = 20 },
+      { type = "fluid", name = "water", amount = 20 }
+      { type = "item", name = "ferric-ore", amount = 2 }
+    },
+    results = {
+      { type = "fluid", name = "raw-polyethylene", amount = 5 },
+    },
+    energy_required = 2.5
+  }, true),
 })
