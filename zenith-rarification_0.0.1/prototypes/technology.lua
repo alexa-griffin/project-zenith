@@ -12,6 +12,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "bronze-plate"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "cupric-ore-washing"
+      },
     },
     unit =
     {
@@ -21,6 +25,7 @@ data:extend({
     },
     prerequisites = { "steel-processing" }
   }),
+
   zen.lib.tech.duplicateFromRaw("steel-processing", {
     name = "gold-processing",
     icon = "__zenith-rarification__/graphics/technology/gold-processing.png",
@@ -30,6 +35,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "gold-plate"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "cupric-ore-cyanidation"
+      },
     },
     unit =
     {
@@ -37,7 +46,6 @@ data:extend({
       ingredients = {{"science-pack-1", 1}, {"science-pack-2", 1}},
       time = 10
     },
-    prerequisites = { "tin-processing", "advanced-material-processing", "natural-gas-processing" }
-
+    prerequisites = { "tin-processing", "advanced-material-processing-2", "ammonia-processing" }
   })
 })

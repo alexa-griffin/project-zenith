@@ -33,7 +33,7 @@ data:extend({
     name = "cupric-ore-cyanidation", -- TODO: make this require cyanide
     ingredients = {
       { "cupric-ore", 4 },
-      { type = "fluid", name = "water", amount = 40 },
+      { type = "fluid", name = "cyanide", amount = 40 },
     },
     enabled = true,
     energy_required = 4,
