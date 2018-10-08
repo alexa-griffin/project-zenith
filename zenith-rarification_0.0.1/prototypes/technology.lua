@@ -2,7 +2,7 @@ data:extend({
   zen.lib.tech.duplicateFromRaw("steel-processing", {
     name = "tin-processing",
     icon = "__zenith-rarification__/graphics/technology/tin-processing.png",
-    results =
+    effects =
     {
       {
         type = "unlock-recipe",
@@ -29,7 +29,7 @@ data:extend({
   zen.lib.tech.duplicateFromRaw("steel-processing", {
     name = "gold-processing",
     icon = "__zenith-rarification__/graphics/technology/gold-processing.png",
-    results =
+    effects =
     {
       {
         type = "unlock-recipe",
