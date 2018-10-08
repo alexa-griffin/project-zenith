@@ -129,4 +129,32 @@ data:extend({
     },
     energy_required = 2.5
   }, true),
+
+  zen.lib.recipe.duplicateFromRaw("rocket-fuel", {
+    name = "rocket-fuel-burner",
+    category = "chemistry",
+    ingredients = {
+      { type = "item", name = "solid-fuel", amount = 30 },
+      { type = "item", name = "sulfur", amount = 5 },
+      { type = "fluid", name = "ammonia", amount = 30 },
+    },
+    results = {
+      { type = "item", name = "rocket-fuel-burner", amount = 1 },
+    },
+    energy_required = 15
+  }, true),
+
+  zen.lib.recipe.duplicateFromRaw("rocket-fuel", {
+    name = "rocket-fuel-igniter",
+    category = "chemistry",
+    ingredients = {
+      { type = "fluid", name = "ethylbenzene", amount = 20 },
+      -- { type = "item", name = "uranium-carbide", amount = 5 },
+      -- { type = "fluid", name = "hydrazine", amount = 20 },
+    },
+    results = {
+      { type = "item", name = "rocket-fuel-igniter", amount = 1 },
+    },
+    energy_required = 15
+  }, true),
 })
