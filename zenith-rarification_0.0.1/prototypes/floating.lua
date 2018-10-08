@@ -19,7 +19,6 @@ data:extend({
       { "cupric-ore", 4 },
       { type = "fluid", name = "water", amount = 100 },
     },
-    category = "crafting-with-fluid",
     energy_required = 4,
     main_product = "tin-ore",
     results = {

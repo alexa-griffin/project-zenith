@@ -94,6 +94,17 @@ data:extend({
     },
   }, true),
 
+  zen.lib.recipe.duplicateFromRaw("solid-fuel-from-heavy-oil", {
+    name = "solid-fuel-from-ethylene",
+    icon = "__zenith-chemistry__/graphics/icons/solid-fuel-from-ethylene.png",
+    ingredients = {
+      { type = "fluid", name = "ethylene", amount = 20 },
+    },
+    results = {
+      { type = "item", name = "solid-fuel", amount = 1 }
+    },
+  }, true),
+
   zen.lib.recipe.duplicateFromRaw("sulfuric-acid", {
     name = "cyanide",
     ingredients = {
@@ -110,11 +121,11 @@ data:extend({
     name = "raw-polyethylene",
     ingredients = {
       { type = "fluid", name = "ethylene", amount = 20 },
-      { type = "fluid", name = "water", amount = 20 }
-      { type = "item", name = "ferric-ore", amount = 2 }
+      { type = "fluid", name = "water", amount = 20 },
+      { type = "item", name = "ferric-ore", amount = 1 }
     },
     results = {
-      { type = "fluid", name = "raw-polyethylene", amount = 5 },
+      { type = "item", name = "raw-polyethylene", amount = 5 },
     },
     energy_required = 2.5
   }, true),

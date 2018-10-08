@@ -37,11 +37,11 @@ end
 function zen.lib.recipe.isFluidCapable(recipe, change)
   change = change or false
   if data.raw.recipe[recipe] then
-    if zen.lib.fluidCapableCategories[data.raw.recipe[recipe].category] ~= nil then
+    if zen.lib.inArr(zen.lib.fluidCapableCategories, data.raw.recipe[recipe].category) then
       return true
     end
     if change then
-      if zen.lib.fluidUpgradeableCategories[recipe.category] ~= nil or data.raw.recipe[recipe].category == nil then
+      if zen.lib.inArr(zen.lib.fluidUpgradeableCategories, recipe.category) or data.raw.recipe[recipe].category == nil then
         data.raw.recipe[recipe].category = "crafting-with-fluid"
         return true
       end
