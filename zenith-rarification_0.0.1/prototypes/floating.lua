@@ -5,7 +5,6 @@ data:extend({
       { "ferric-ore", 4 },
       { type = "fluid", name = "sulfuric-acid", amount = 30 },
     },
-    enabled = true,
     energy_required = 4,
     main_product = "scandium-ore",
     results = {
@@ -21,7 +20,6 @@ data:extend({
       { type = "fluid", name = "water", amount = 100 },
     },
     category = "crafting-with-fluid",
-    enabled = true,
     energy_required = 4,
     main_product = "tin-ore",
     results = {
@@ -31,12 +29,11 @@ data:extend({
   }),
 
   zen.lib.recipe.duplicateFromRaw("sulfuric-acid", {
-    name = "cupric-ore-cyanidation", -- TODO: make this require cyanide
+    name = "cupric-ore-cyanidation",
     ingredients = {
       { "cupric-ore", 4 },
       { type = "fluid", name = "cyanide", amount = 40 },
     },
-    enabled = true,
     energy_required = 4,
     main_product = "gold-ore",
     results = {

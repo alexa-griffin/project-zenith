@@ -37,7 +37,7 @@ data:extend({
     energy_required = 12.5
   }, true),
 
-  zen.lib.recipe.duplicateFromRaw("sulfur", {
+  zen.lib.recipe.duplicateFromRaw("sulfuric-acid", {
     name = "ethylbenzene",
     ingredients = {
       { type = "fluid", name = "benzene", amount = 20 },
@@ -64,6 +64,7 @@ data:extend({
 
   zen.lib.recipe.duplicateFromRaw("solid-fuel-from-heavy-oil", {
     name = "solid-fuel-from-benzene",
+    icon = "__zenith-chemistry__/graphics/icons/solid-fuel-from-benzene.png",
     ingredients = {
       { type = "fluid", name = "benzene", amount = 5 },
     },
@@ -74,6 +75,7 @@ data:extend({
 
   zen.lib.recipe.duplicateFromRaw("solid-fuel-from-heavy-oil", {
     name = "solid-fuel-from-methane",
+    icon = "__zenith-chemistry__/graphics/icons/solid-fuel-from-methane.png",
     ingredients = {
       { type = "fluid", name = "methane", amount = 10 },
     },
@@ -84,6 +86,7 @@ data:extend({
 
   zen.lib.recipe.duplicateFromRaw("solid-fuel-from-heavy-oil", {
     name = "solid-fuel-from-propene",
+    icon = "__zenith-chemistry__/graphics/icons/solid-fuel-from-propene.png",
     ingredients = {
       { type = "fluid", name = "propene", amount = 10 },
     },
