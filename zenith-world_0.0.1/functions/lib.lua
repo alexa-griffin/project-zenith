@@ -70,6 +70,16 @@ function zen.lib.hexToColor(hex)
   end
 end
 
+function zen.lib.inArr(arr, str)
+  for _,v in pairs(arr) do
+    if v == str then
+      return true
+    end
+  end
+  return false
+end
+
+
 -- thank you bob
 function zen.lib.getBeltSpeed(ips)
   return ips * 3/1280 --0.00234375
