@@ -19,11 +19,14 @@ data:extend({
     },
     unit =
     {
-      count = 50,
-      ingredients = {{"science-pack-1", 1}, {"science-pack-2", 1}},
+      count = 150,
+      ingredients = {
+        { "science-pack-1", 1 },
+        { "science-pack-2", 1 }
+      },
       time = 10
     },
-    prerequisites = { "steel-processing" }
+    prerequisites = { "steel-processing", "advanced-material-processing" }
   }),
 
   zen.lib.tech.duplicateFromRaw("steel-processing", {
@@ -42,10 +45,43 @@ data:extend({
     },
     unit =
     {
-      count = 50,
-      ingredients = {{"science-pack-1", 1}, {"science-pack-2", 1}},
+      count = 200,
+      ingredients = {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+        {"science-pack-3", 1},
+        {"production-science-pack", 1}
+      },
       time = 10
     },
     prerequisites = { "tin-processing", "advanced-material-processing-2", "ammonia-processing" }
+  }),
+
+  zen.lib.tech.duplicateFromRaw("steel-processing", {
+    name = "scandium-processing",
+    icon = "__zenith-rarification__/graphics/technology/scandium-processing.png",
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "scandium-plate"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "ferric-ore-washing"
+      },
+    },
+    unit =
+    {
+      count = 400,
+      ingredients = {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+        {"science-pack-3", 1},
+        {"production-science-pack", 1}
+      },
+      time = 10
+    },
+    prerequisites = { "steel-processing", "advanced-material-processing-2", "sulfur-processing" }
   })
 })
