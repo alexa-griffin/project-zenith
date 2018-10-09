@@ -49,58 +49,13 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "fluid", name = "water", amount = 300 },
-      { type = "item", name = "raw-wood", amount = 100 }
+      { type = "item", name = "raw-wood", amount = 100 },
       { type = "item", name = "ferric-ore", amount = 3}
     },
+    subgroup = "raw-material",
     results = {
-      {
-        name = "red-alien-spores",
-        probability = 0.5,
-        amount_min = 1,
-        amount_max = 3,
-      },
-      {
-        name = "blue-alien-spores",
-        probability = 0.5,
-        amount_min = 1,
-        amount_max = 3,
-      },
-      {
-        name = "green-alien-spores",
-        probability = 0.5,
-        amount_min = 1,
-        amount_max = 3,
-      },
-      {
-        name = "yellow-alien-spores",
-        probability = 0.5,
-        amount_min = 1,
-        amount_max = 3,
-      },
-      {
-        name = "orange-alien-spores",
-        probability = 0.5,
-        amount_min = 1,
-        amount_max = 3,
-      },
-      {
-        name = "purple-alien-spores",
-        probability = 0.5,
-        amount_min = 1,
-        amount_max = 3,
-      },
-      {
-        name = "white-alien-spores",
-        probability = 0.5,
-        amount_min = 1,
-        amount_max = 3,
-      },
-      {
-        name = "black-alien-spores",
-        probability = 0.5,
-        amount_min = 1,
-        amount_max = 3,
-      },
+      { type = "fluid", name = "water", amount = 0 },
+
     },
     energy_required = 60
   }, true),
