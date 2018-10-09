@@ -54,7 +54,66 @@ data:extend({
     },
     subgroup = "raw-material",
     results = {
-      { type = "fluid", name = "water", amount = 0 },
+      {
+        name = "red-alien-spores",
+        amount_min = 1,
+        amount_max = 3,
+        probability = 0.5,
+      },
+      {
+        name = "orange-alien-spores",
+        amount_min = 1,
+        amount_max = 3,
+        probability = 0.5,
+      },
+      {
+        name = "yellow-alien-spores",
+        amount_min = 1,
+        amount_max = 3,
+        probability = 0.5,
+      },
+      {
+        name = "green-alien-spores",
+        amount_min = 1,
+        amount_max = 3,
+        probability = 0.5,
+      },
+      {
+        name = "cyan-alien-spores",
+        amount_min = 1,
+        amount_max = 3,
+        probability = 0.5,
+      },
+      {
+        name = "blue-alien-spores",
+        amount_min = 1,
+        amount_max = 3,
+        probability = 0.5,
+      },
+      {
+        name = "purple-alien-spores",
+        amount_min = 1,
+        amount_max = 3,
+        probability = 0.5,
+      },
+      {
+        name = "pink-alien-spores",
+        amount_min = 1,
+        amount_max = 3,
+        probability = 0.5,
+      },
+      {
+        name = "white-alien-spores",
+        amount_min = 1,
+        amount_max = 3,
+        probability = 0.5,
+      },
+      {
+        name = "black-alien-spores",
+        amount_min = 1,
+        amount_max = 3,
+        probability = 0.5,
+      },
 
     },
     energy_required = 60

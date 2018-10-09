@@ -26,6 +26,22 @@ data:extend({
         base_level = -1,
         pipe_connections = {{ type="input", position = {0, -2} }}
       },
+      {
+        production_type = "input",
+        pipe_picture = assembler3pipepictures(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = -1,
+        pipe_connections = {{ type="input", position = {0, 2} }}
+      },
+      {
+        production_type = "output",
+        pipe_picture = assembler3pipepictures(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = -1,
+        pipe_connections = {{ type="input", position = {2, 0} }}
+      },
       off_when_no_fluid_recipe = true
     },
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},

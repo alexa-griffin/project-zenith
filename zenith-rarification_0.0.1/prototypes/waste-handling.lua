@@ -3,7 +3,6 @@ data:extend({
     name = "ferric-waste-treatment",
     icon = "__zenith-rarification__/graphics/icons/ferric-waste.png",
     icon_size = 32,
-    enabled = true,
     ingredients = {
       { type = "fluid", name = "ferric-waste", amount = 100 },
       { type = "fluid", name = "water", amount = 100 }
@@ -17,7 +16,6 @@ data:extend({
     name = "cupric-waste-treatment",
     icon = "__zenith-rarification__/graphics/icons/cupric-waste.png",
     icon_size = 32,
-    enabled = true,
     ingredients = {
       { type = "fluid", name = "cupric-waste", amount = 100 },
       { type = "fluid", name = "water", amount = 100 }
