@@ -4,6 +4,6 @@
  	"title": "Zenith Bioprocessing",
  	"author": "Alexa",
  	"factorio_version": "0.16",
- 	"dependencies": ["base >= 0.16"],
+ 	"dependencies": ["base >= 0.16", "zenith-world"],
  	"description": "adds many biological processes."
 }
