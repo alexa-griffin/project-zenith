@@ -29,7 +29,7 @@ function zen.bio.alien(color, order, poison, result)
     }),
     zen.lib.recipe.duplicateFromRaw("iron-plate", {
       name = color .. "-alien-growth",
-      enabled = true,
+      enabled = false,
       category = "arboretuming",
       subgroup = "raw-resource",
       order = "z-b-" .. order,
@@ -43,7 +43,7 @@ function zen.bio.alien(color, order, poison, result)
 
     zen.lib.recipe.duplicateFromRaw("iron-plate", {
       name = color .. "-alien-extraction",
-      enabled = true,
+      enabled = false,
       category = "arboretuming",
       subgroup = "raw-resource",
       order = "z-c-" .. order,
@@ -55,6 +55,32 @@ function zen.bio.alien(color, order, poison, result)
       results = result or {
         {
           name = "nutrient-paste", amount = 30
+        },
+      }
+    }),
+
+    zen.lib.tech.duplicateFromRaw("advanced-material-processing", {
+      name = color .. "-alien-processing",
+      icon = "__zenith-bio__/graphics/technology/" .. color .. "-alien-processing.png",
+      unit = {
+        count = 400,
+        ingredients = {
+          {"science-pack-1", 1},
+          {"science-pack-2", 1},
+          {"science-pack-3", 1},
+          {"production-science-pack", 1},
+        },
+        time = 60
+      },
+      prerequisites = { "bio-processing-2", "advanced-material-processing-2" },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = color .. "-alien-growth",
+        },
+        {
+          type = "unlock-recipe",
+          recipe = color .. "-alien-extraction",
         },
       }
     }),
