@@ -1,9 +1,9 @@
 {
  	"name": "zenith-bio",
  	"version": "0.0.1",
- 	"title": "",
+ 	"title": "Zenith Bioprocessing",
  	"author": "Alexa",
  	"factorio_version": "0.16",
  	"dependencies": ["base >= 0.16"],
- 	"description": ""
+ 	"description": "adds many biological processes."
 }

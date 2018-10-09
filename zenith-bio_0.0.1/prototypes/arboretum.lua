@@ -155,4 +155,8 @@ data:extend({
     },
     result = "arboretum"
   },
+  {
+    type = "recipe-category",
+    name = "arboretuming"
+  },
 })
