@@ -52,7 +52,7 @@ function zen.bio.alien(color, order, poison, result)
         { type = "fluid", name = poison, amount = 20 }
       },
       energy_required = 120,
-      results = result or {
+      results = result and { result } or {
         {
           name = "nutrient-paste", amount = 30
         },
@@ -90,7 +90,7 @@ end
 
 zen.bio.colors = {"red", "orange", "yellow", "green", "cyan", "blue", "purple", "pink", "white", "black"}
 
-zen.bio.alien("red", "a", "sulfuric-acid", "sodium-hypochlorite")
+zen.bio.alien("red", "a", "sulfuric-acid", { type = "fluid", name = "sodium-hypochlorite", amount = 10 })
 zen.bio.alien("orange", "b", "sulfuric-acid")
 zen.bio.alien("yellow", "c", "sulfuric-acid")
 zen.bio.alien("green", "d", "sulfuric-acid")
