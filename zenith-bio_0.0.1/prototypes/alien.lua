@@ -26,7 +26,7 @@ function zen.bio.alien(color, order, poison, result)
       result = "nutrient-paste",
       icon = "__zenith-bio__/graphics/icons/nutrient-paste-from-" .. color .. "-alien-spores.png",
       icon_size = 32
-    }),
+    }, true),
     zen.lib.recipe.duplicateFromRaw("iron-plate", {
       name = color .. "-alien-growth",
       enabled = false,
@@ -39,7 +39,7 @@ function zen.bio.alien(color, order, poison, result)
       },
       energy_required = 120,
       result = color .. "-alien",
-    }),
+    }, true),
 
     zen.lib.recipe.duplicateFromRaw("iron-plate", {
       name = color .. "-alien-extraction",
@@ -57,7 +57,7 @@ function zen.bio.alien(color, order, poison, result)
           name = "nutrient-paste", amount = 30
         },
       }
-    }),
+    }, true),
 
     zen.lib.tech.duplicateFromRaw("advanced-material-processing", {
       name = color .. "-alien-processing",
