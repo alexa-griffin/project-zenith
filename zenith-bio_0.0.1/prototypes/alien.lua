@@ -90,7 +90,7 @@ end
 
 zen.bio.colors = {"red", "orange", "yellow", "green", "cyan", "blue", "purple", "pink", "white", "black"}
 
-zen.bio.alien("red", "a", "sulfuric-acid")
+zen.bio.alien("red", "a", "sulfuric-acid", "sodium-hypochlorite")
 zen.bio.alien("orange", "b", "sulfuric-acid")
 zen.bio.alien("yellow", "c", "sulfuric-acid")
 zen.bio.alien("green", "d", "sulfuric-acid")

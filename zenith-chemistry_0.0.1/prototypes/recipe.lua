@@ -149,8 +149,8 @@ data:extend({
     category = "chemistry",
     ingredients = {
       { type = "fluid", name = "ethylbenzene", amount = 20 },
+      { type = "fluid", name = "hydrazine", amount = 20 },
       -- { type = "item", name = "uranium-carbide", amount = 5 },
-      -- { type = "fluid", name = "hydrazine", amount = 20 },
     },
     results = {
       { type = "item", name = "rocket-fuel-igniter", amount = 1 },

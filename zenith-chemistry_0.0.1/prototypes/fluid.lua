@@ -47,4 +47,10 @@ data:extend({
     base_color = zen.lib.hexToColor("#1c1c1c"),
     flow_color = zen.lib.hexToColor("#d1d1d1"),
   }),
+  zen.lib.duplicateFromRaw("fluid", "heavy-oil", {
+    name = "hydrazine",
+    icon = "__zenith-chemistry__/graphics/icons/hydrazine.png",
+    base_color = zen.lib.hexToColor("#ff4747"),
+    flow_color = zen.lib.hexToColor("#4f1515"),
+  }),
 })
