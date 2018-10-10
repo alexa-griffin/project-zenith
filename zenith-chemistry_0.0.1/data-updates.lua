@@ -36,6 +36,7 @@ zen.lib.tech.addRecipeUnlock("plastics", "raw-polyethylene")
 
 zen.lib.tech.replaceRecipeUnlock("oil-processing", "solid-fuel-from-petroleum-gas", "solid-fuel-from-ethylene")
 zen.lib.tech.addRecipeUnlock("advanced-oil-processing", "solid-fuel-from-petroleum-gas")
+zen.lib.tech.addRecipeUnlock("advanced-oil-processing", "ethylene-cracking")
 
 zen.lib.tech.addRecipeUnlock("rocket-silo", "rocket-fuel-igniter")
 zen.lib.tech.addRecipeUnlock("rocket-silo", "rocket-fuel-burner")

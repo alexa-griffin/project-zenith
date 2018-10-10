@@ -137,7 +137,7 @@ data:extend({
     name = "rocket-fuel-burner",
     category = "chemistry",
     ingredients = {
-      { type = "item", name = "solid-fuel", amount = 30 },
+      { type = "item", name = "bio-fuel", amount = 30 },
       { type = "item", name = "sulfur", amount = 5 },
       { type = "fluid", name = "ammonia", amount = 30 },
     },
@@ -166,7 +166,7 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "ammonia", amount = 20 },
       { type = "fluid", name = "sodium-hypochlorite", amount = 20 },
-      { type = "item",  name = "bio-fuel", amount = 2 }
+      { type = "item",  name = "ferric-ore", amount = 2 }
     },
     results = {
       { type = "fluid", name = "hydrazine", amount = 20 }

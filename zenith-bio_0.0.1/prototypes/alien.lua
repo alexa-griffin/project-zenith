@@ -105,7 +105,6 @@ function zen.bio.alien(color, order, poison, result, main)
       }
     }),
   })
-
 end
 
 zen.bio.colors = {"red", "orange", "yellow", "green", "cyan", "blue", "purple", "pink", "white", "black"}
@@ -113,7 +112,7 @@ zen.bio.colors = {"red", "orange", "yellow", "green", "cyan", "blue", "purple", 
 zen.bio.alien("red",     "c", "sulfuric-acid", {{ type = "item",  name = "bio-hydrogen",         amount = 2  }})
 zen.bio.alien("orange",  "b", "sulfuric-acid", {{ type = "item",  name = "bio-hydrogen",         amount = 2  }})
 zen.bio.alien("yellow",  "a", "sulfuric-acid", {{ type = "item" , name = "bio-hydrogen",         amount = 2  }})
-zen.bio.alien("green",   "d", "sulfuric-acid", {{ type = "item",  name = "raw-cellulose",        amount = 2  }}))
+zen.bio.alien("green",   "d", "sulfuric-acid", {{ type = "item",  name = "raw-cellulose",        amount = 2  }})
 zen.bio.alien("cyan",    "e", "sulfuric-acid", {{ type = "item",  name = "raw-cellulose",        amount = 2  }})
 zen.bio.alien("blue",    "f", "sulfuric-acid", {{ type = "fluid", name = "sodium-hypochlorite",  amount = 10 }})
 zen.bio.alien("purple",  "g", "sulfuric-acid", {{ type = "item",  name = "raw-cellulose",        amount = 2  }})
