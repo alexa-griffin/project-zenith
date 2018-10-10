@@ -52,13 +52,26 @@ function zen.bio.alien(color, order, poison, result)
       order = "z-c-" .. order,
       ingredients = {
         { color .. "-alien", 1 },
-        { type = "fluid", name = poison, amount = 20 }
+        { "nutrient-paste", 10 },
       },
       energy_required = 120,
-      results = result and { result } or {
-        {
-          name = "nutrient-paste", amount = 30
-        },
+      results = result
+      }
+    }, true),
+
+    zen.lib.recipe.duplicateFromRaw("iron-plate", {
+      name = color .. "-alien-nutrification",
+      enabled = false,
+      category = "arboretuming",
+      subgroup = "raw-resource",
+      order = "z-d-" .. order,
+      ingredients = {
+        { color .. "-alien", 1 },
+        { type = "fluid", name = poison, amount = 5 }
+      },
+      energy_required = 120,
+      results = {
+        { name = "nutrient-paste", amount = 10 },
       }
     }, true),
 
@@ -85,6 +98,10 @@ function zen.bio.alien(color, order, poison, result)
           type = "unlock-recipe",
           recipe = color .. "-alien-extraction",
         },
+        {
+          type = "unlock-recipe",
+          recipe = color .. "-alien-nutrification",
+        },
       }
     }),
   })
@@ -93,14 +110,30 @@ end
 
 zen.bio.colors = {"red", "orange", "yellow", "green", "cyan", "blue", "purple", "pink", "white", "black"}
 
-zen.bio.alien("red",    "a", "sulfuric-acid", { type = "fluid", name = "sodium-hypochlorite",       amount = 10 })
-zen.bio.alien("orange", "b", "sulfuric-acid", { type = "item",  name = "bio-hydrogen",              amount = 2  })
-zen.bio.alien("yellow", "c", "sulfuric-acid", { type = "item",  name = "blue-czochralski-starter",  amount = 8  })
-zen.bio.alien("green",  "d", "sulfuric-acid", { type = "item",  name = "red-czochralski-starter",   amount = 8  })
-zen.bio.alien("cyan",   "e", "sulfuric-acid", { type = "item",  name = "raw-cellulose",             amount = 2  })
-zen.bio.alien("blue",   "f", "sulfuric-acid", { type = "item",  name = "green-czochralski-starter", amount = 8  })
-zen.bio.alien("purple", "g", "sulfuric-acid", { type = "item",  name = "raw-cellulose",             amount = 2  })
-zen.bio.alien("pink",   "h", "sulfuric-acid", { type = "item",  name = "raw-cellulose",             amount = 2  })
-zen.bio.alien("white",  "i", "sulfuric-acid", { type = "fluid", name = "sodium-hypochlorite",       amount = 10 })
-zen.bio.alien("black",  "j", "sulfuric-acid", { type = "fluid", name = "sodium-hypochlorite",       amount = 10 })
+zen.bio.alien("red",    "a", "sulfuric-acid", {{ type = "fluid", name = "bio-hydrogen",              amount = 2  }})
+zen.bio.alien("orange", "b", "sulfuric-acid", {{ type = "item",  name = "bio-hydrogen",              amount = 2  }})
+zen.bio.alien("cyan",   "e", "sulfuric-acid", {{ type = "item",  name = "raw-cellulose",             amount = 2  }})
+zen.bio.alien("purple", "g", "sulfuric-acid", {{ type = "item",  name = "raw-cellulose",             amount = 2  }})
+zen.bio.alien("pink",   "h", "sulfuric-acid", {{ type = "item",  name = "raw-cellulose",             amount = 2  }})
+zen.bio.alien("white",  "i", "sulfuric-acid", {{ type = "fluid", name = "sodium-hypochlorite",       amount = 10 }})
+zen.bio.alien("black",  "j", "sulfuric-acid", {{ type = "fluid", name = "sodium-hypochlorite",       amount = 10 }})
+
+zen.bio.alien("yellow", "c", "sulfuric-acid", {
+  { type = "item",  name = "red-czochralski-starter",    amount = 8, probability = 0.5  }
+  { type = "item",  name = "green-czochralski-starter",  amount = 8, probability = 0.5  }
+  { type = "item",  name = "blue-czochralski-starter",   amount = 8, probability = 0.5  }
+})
+zen.bio.alien("green",  "d", "sulfuric-acid", {
+  { type = "item",  name = "red-czochralski-starter",    amount = 8, probability = 0.5  }
+  { type = "item",  name = "green-czochralski-starter",  amount = 8, probability = 0.5  }
+  { type = "item",  name = "blue-czochralski-starter",   amount = 8, probability = 0.5  }
+})
+zen.bio.alien("blue",   "f", "sulfuric-acid", {
+  { type = "item",  name = "red-czochralski-starter",   amount = 8, probability = 0.5  }
+  { type = "item",  name = "green-czochralski-starter", amount = 8, probability = 0.5  }
+  { type = "item",  name = "blue-czochralski-starter",  amount = 8, probability = 0.5  }
+})
+
+
+
 -- Holy hell that's a ton of aliens to deal with
