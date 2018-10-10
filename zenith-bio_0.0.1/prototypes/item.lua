@@ -11,4 +11,10 @@ data:extend({
     fuel_value = "120MJ",
   }),
 
+  zen.lib.item.duplicateFromRaw("wood", {
+    name = "bio-hydrogen",
+    icon = "__zenith-bio__/graphics/icons/bio-hydrogen.png",
+    fuel_value = "150MJ",
+  }),
+
 })

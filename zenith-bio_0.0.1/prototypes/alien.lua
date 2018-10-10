@@ -7,6 +7,7 @@ function zen.bio.alien(color, order, poison, result)
       fuel_category = "chemical",
       icon = "__zenith-bio__/graphics/icons/" .. color .. "-alien-spores.png",
     }),
+
     zen.lib.item.duplicateFromRaw("iron-ore", {
       name = color .. "-alien",
       order = "y-" .. order,
@@ -14,6 +15,7 @@ function zen.bio.alien(color, order, poison, result)
       fuel_category = "chemical",
       icon = "__zenith-bio__/graphics/icons/" .. color .. "-alien.png",
     }),
+
     zen.lib.recipe.duplicateFromRaw("iron-plate", {
       name = "nutrient-paste-from-" .. color .. "-alien-spores",
       enabled = false,
@@ -27,6 +29,7 @@ function zen.bio.alien(color, order, poison, result)
       icon = "__zenith-bio__/graphics/icons/nutrient-paste-from-" .. color .. "-alien-spores.png",
       icon_size = 32
     }, true),
+
     zen.lib.recipe.duplicateFromRaw("iron-plate", {
       name = color .. "-alien-growth",
       enabled = false,
@@ -91,7 +94,7 @@ end
 zen.bio.colors = {"red", "orange", "yellow", "green", "cyan", "blue", "purple", "pink", "white", "black"}
 
 zen.bio.alien("red", "a", "sulfuric-acid", { type = "fluid", name = "sodium-hypochlorite", amount = 10 })
-zen.bio.alien("orange", "b", "sulfuric-acid")
+zen.bio.alien("orange", "b", "sulfuric-acid", { type = "item", name = "bio-hydrogen", amount = 2 })
 zen.bio.alien("yellow", "c", "sulfuric-acid")
 zen.bio.alien("green", "d", "sulfuric-acid")
 zen.bio.alien("cyan", "e", "sulfuric-acid")

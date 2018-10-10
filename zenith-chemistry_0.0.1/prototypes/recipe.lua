@@ -62,35 +62,38 @@ data:extend({
   }, true),
 
   zen.lib.recipe.duplicateFromRaw("solid-fuel-from-heavy-oil", {
-    name = "solid-fuel-from-benzene",
-    icon = "__zenith-chemistry__/graphics/icons/solid-fuel-from-benzene.png",
+    name = "bio-fuel-from-benzene",
+    icon = "__zenith-chemistry__/graphics/icons/bio-fuel-from-benzene.png",
     ingredients = {
       { type = "fluid", name = "benzene", amount = 5 },
+      { type = "item", name = "bio-hydrogen", amount = 1 },
     },
     results = {
-      { type = "item", name = "solid-fuel", amount = 1 }
+      { type = "item", name = "bio-fuel", amount = 1 }
     },
   }, true),
 
   zen.lib.recipe.duplicateFromRaw("solid-fuel-from-heavy-oil", {
-    name = "solid-fuel-from-methane",
-    icon = "__zenith-chemistry__/graphics/icons/solid-fuel-from-methane.png",
+    name = "bio-fuel-from-methane",
+    icon = "__zenith-chemistry__/graphics/icons/bio-fuel-from-methane.png",
     ingredients = {
       { type = "fluid", name = "methane", amount = 10 },
+      { type = "item", name = "bio-hydrogen", amount = 1 },
     },
     results = {
-      { type = "item", name = "solid-fuel", amount = 1 }
+      { type = "item", name = "bio-fuel", amount = 1 }
     },
   }, true),
 
   zen.lib.recipe.duplicateFromRaw("solid-fuel-from-heavy-oil", {
-    name = "solid-fuel-from-propene",
-    icon = "__zenith-chemistry__/graphics/icons/solid-fuel-from-propene.png",
+    name = "bio-fuel-from-propene",
+    icon = "__zenith-chemistry__/graphics/icons/bio-fuel-from-propene.png",
     ingredients = {
       { type = "fluid", name = "propene", amount = 10 },
+      { type = "item", name = "bio-hydrogen", amount = 1 },
     },
     results = {
-      { type = "item", name = "solid-fuel", amount = 1 }
+      { type = "item", name = "bio-fuel", amount = 1 }
     },
   }, true),
 
@@ -101,7 +104,7 @@ data:extend({
       { type = "fluid", name = "ethylene", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-fuel", amount = 1 }
+      { type = "item", name = "bio-fuel", amount = 1 }
     },
   }, true),
 
