@@ -104,7 +104,7 @@ data:extend({
       { type = "fluid", name = "ethylene", amount = 20 },
     },
     results = {
-      { type = "item", name = "bio-fuel", amount = 1 }
+      { type = "item", name = "solid-fuel", amount = 1 }
     },
   }, true),
 
@@ -187,6 +187,7 @@ data:extend({
 
   zen.lib.recipe.duplicateFromRaw("light-oil-cracking", {
     name = "benzene-cracking",
+    icon = "__zenith-chemistry__/graphics/icons/benzene-cracking.png",
     ingredients = {
       { type = "fluid", name = "benzene", amount = 30 },
       { type = "fluid", name = "water", amount = 30 },
@@ -198,6 +199,7 @@ data:extend({
 
   zen.lib.recipe.duplicateFromRaw("light-oil-cracking", {
     name = "propene-cracking",
+    icon = "__zenith-chemistry__/graphics/icons/propene-cracking.png",
     ingredients = {
       { type = "fluid", name = "propene", amount = 30 },
       { type = "fluid", name = "water", amount = 30 },

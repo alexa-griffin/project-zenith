@@ -95,7 +95,7 @@ zen.bio.colors = {"red", "orange", "yellow", "green", "cyan", "blue", "purple", 
 
 zen.bio.alien("red",    "a", "sulfuric-acid", { type = "fluid", name = "sodium-hypochlorite", amount = 10 })
 zen.bio.alien("orange", "b", "sulfuric-acid", { type = "item",  name = "bio-hydrogen",        amount = 2  })
-zen.bio.alien("yellow", "c", "sulfuric-acid", { type = "item",  name = "bio-pionium",         amount = 2  })
+zen.bio.alien("yellow", "c", "sulfuric-acid")
 zen.bio.alien("green",  "d", "sulfuric-acid", { type = "item",  name = "czochralski-starter", amount = 8  })
 zen.bio.alien("cyan",   "e", "sulfuric-acid", { type = "item",  name = "raw-cellulose",       amount = 2  })
 zen.bio.alien("blue",   "f", "sulfuric-acid")

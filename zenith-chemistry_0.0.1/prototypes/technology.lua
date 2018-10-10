@@ -33,10 +33,6 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "benzene-cracking"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "propene-cracking"
       }
     },
@@ -61,6 +57,6 @@ data:extend({
       }
     },
     icon = "__zenith-chemistry__/graphics/technology/basic-chemistry.png",
-    prerequisites = { "advanced-oil-processing" }
+    prerequisites = { "natural-gas-processing" }
   })
 })

@@ -24,12 +24,6 @@ data:extend({
   }),
 
   zen.lib.item.duplicateFromRaw("solid-fuel", {
-    name = "bio-pionium",
-    icon = "__zenith-bio__/graphics/icons/bio-pionium.png",
-    fuel_value = "250MJ",
-  }),
-
-  zen.lib.item.duplicateFromRaw("solid-fuel", {
     name = "czochralski-starter",
     icon = "__zenith-bio__/graphics/icons/czochralski-starter.png",
     fuel_value = "250MJ",

@@ -4,6 +4,6 @@
  	"title": "Zenith Rarification",
  	"author": "Alexa",
  	"factorio_version": "0.16",
- 	"dependencies": ["base >= 0.16", "zenith-world", "zenith-chemistry"],
+ 	"dependencies": ["base >= 0.16", "zenith-world", "zenith-chemistry", "zenith-bio"],
  	"description": "changes the processes of smelting and refining as well as adding many other ores produced from ferric and cupric ore."
 }

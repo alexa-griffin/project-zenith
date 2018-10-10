@@ -5,11 +5,11 @@ data:extend({
     icon_size = 32,
     ingredients = {
       { type = "fluid", name = "ferric-waste", amount = 100 },
-      { type = "fluid", name = "water", amount = 100 }
+      { type = "fluid", name = "sodium-hypochlorite", amount = 10 }
     },
     results = {
       { "stone", 1 },
-      { "ferric-ore", 1 }
+      { "ferric-ore", 2 }
     }
   }),
   zen.lib.recipe.duplicateFromRaw("sulfuric-acid", {
