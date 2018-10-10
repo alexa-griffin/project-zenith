@@ -17,10 +17,27 @@ data:extend({
     fuel_value = "150MJ",
   }),
 
-  zen.lib.item.duplicateFromRaw("wood", {
+  zen.lib.item.duplicateFromRaw("solid-fuel", {
     name = "bio-fuel",
     icon = "__zenith-bio__/graphics/icons/bio-fuel.png",
     fuel_value = "250MJ",
+  }),
+
+  zen.lib.item.duplicateFromRaw("solid-fuel", {
+    name = "bio-pionium",
+    icon = "__zenith-bio__/graphics/icons/bio-pionium.png",
+    fuel_value = "250MJ",
+  }),
+
+  zen.lib.item.duplicateFromRaw("solid-fuel", {
+    name = "czochralski-starter",
+    icon = "__zenith-bio__/graphics/icons/czochralski-starter.png",
+    fuel_value = "250MJ",
+  }),
+
+  zen.lib.item.duplicateFromRaw("plastic-bar", {
+    name = "raw-cellulose",
+    icon = "__zenith-bio__/graphics/icons/raw-cellulose.png",
   }),
 
 })
