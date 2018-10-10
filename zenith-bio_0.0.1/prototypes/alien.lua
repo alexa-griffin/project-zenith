@@ -38,7 +38,7 @@ function zen.bio.alien(color, order, poison, result)
       order = "z-b-" .. order,
       ingredients = {
         { color .. "-alien-spores", 1 },
-        { "nutrient-paste", 4 }
+        { "nutrient-paste", 8 }
       },
       energy_required = 120,
       result = color .. "-alien",
@@ -93,14 +93,14 @@ end
 
 zen.bio.colors = {"red", "orange", "yellow", "green", "cyan", "blue", "purple", "pink", "white", "black"}
 
-zen.bio.alien("red",    "a", "sulfuric-acid", { type = "fluid", name = "sodium-hypochlorite", amount = 10 })
-zen.bio.alien("orange", "b", "sulfuric-acid", { type = "item",  name = "bio-hydrogen",        amount = 2  })
-zen.bio.alien("yellow", "c", "sulfuric-acid")
-zen.bio.alien("green",  "d", "sulfuric-acid", { type = "item",  name = "czochralski-starter", amount = 8  })
-zen.bio.alien("cyan",   "e", "sulfuric-acid", { type = "item",  name = "raw-cellulose",       amount = 2  })
-zen.bio.alien("blue",   "f", "sulfuric-acid")
-zen.bio.alien("purple", "g", "sulfuric-acid")
-zen.bio.alien("pink",   "h", "sulfuric-acid")
-zen.bio.alien("white",  "i", "sulfuric-acid")
-zen.bio.alien("black",  "j", "sulfuric-acid")
+zen.bio.alien("red",    "a", "sulfuric-acid", { type = "fluid", name = "sodium-hypochlorite",       amount = 10 })
+zen.bio.alien("orange", "b", "sulfuric-acid", { type = "item",  name = "bio-hydrogen",              amount = 2  })
+zen.bio.alien("yellow", "c", "sulfuric-acid", { type = "item",  name = "blue-czochralski-starter",  amount = 8  })
+zen.bio.alien("green",  "d", "sulfuric-acid", { type = "item",  name = "red-czochralski-starter",   amount = 8  })
+zen.bio.alien("cyan",   "e", "sulfuric-acid", { type = "item",  name = "raw-cellulose",             amount = 2  })
+zen.bio.alien("blue",   "f", "sulfuric-acid", { type = "item",  name = "green-czochralski-starter", amount = 8  })
+zen.bio.alien("purple", "g", "sulfuric-acid", { type = "item",  name = "raw-cellulose",             amount = 2  })
+zen.bio.alien("pink",   "h", "sulfuric-acid", { type = "item",  name = "raw-cellulose",             amount = 2  })
+zen.bio.alien("white",  "i", "sulfuric-acid", { type = "fluid", name = "sodium-hypochlorite",       amount = 10 })
+zen.bio.alien("black",  "j", "sulfuric-acid", { type = "fluid", name = "sodium-hypochlorite",       amount = 10 })
 -- Holy hell that's a ton of aliens to deal with

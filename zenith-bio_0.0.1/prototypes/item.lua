@@ -23,10 +23,17 @@ data:extend({
     fuel_value = "250MJ",
   }),
 
-  zen.lib.item.duplicateFromRaw("solid-fuel", {
-    name = "czochralski-starter",
-    icon = "__zenith-bio__/graphics/icons/czochralski-starter.png",
-    fuel_value = "250MJ",
+  zen.lib.item.duplicateFromRaw("iron-ore", {
+    name = "red-czochralski-starter",
+    icon = "__zenith-bio__/graphics/icons/red-czochralski-starter.png",
+  }),
+  zen.lib.item.duplicateFromRaw("iron-ore", {
+    name = "green-czochralski-starter",
+    icon = "__zenith-bio__/graphics/icons/green-czochralski-starter.png",
+  }),
+  zen.lib.item.duplicateFromRaw("iron-ore", {
+    name = "blue-czochralski-starter",
+    icon = "__zenith-bio__/graphics/icons/blue-czochralski-starter.png",
   }),
 
   zen.lib.item.duplicateFromRaw("plastic-bar", {
