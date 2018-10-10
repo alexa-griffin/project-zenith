@@ -30,8 +30,8 @@ data:extend({
       { type = "fluid", name = "water", amount = 30 }
     },
     results = {
-      { type = "fluid", name = "benzene", amount = 10 },
-      { type = "fluid", name = "propene", amount = 20 },
+      { type = "fluid", name = "propene", amount = 10 },
+      { type = "fluid", name = "benzene", amount = 20 },
       { type = "fluid", name = "methane", amount = 30 }
     },
     energy_required = 12.5
@@ -172,5 +172,38 @@ data:extend({
       { type = "fluid", name = "hydrazine", amount = 20 }
     },
     energy_required = 12.5
+  }, true),
+
+  zen.lib.recipe.duplicateFromRaw("light-oil-cracking", {
+    name = "ethylene-cracking",
+    ingredients = {
+      { type = "fluid", name = "ethylene", amount = 30 },
+      { type = "fluid", name = "water", amount = 30 },
+    },
+    results = {
+      { type = "fluid", name = "petroleum", amount = 20 }
+    },
+  }, true),
+
+  zen.lib.recipe.duplicateFromRaw("light-oil-cracking", {
+    name = "benzene-cracking",
+    ingredients = {
+      { type = "fluid", name = "benzene", amount = 30 },
+      { type = "fluid", name = "water", amount = 30 },
+    },
+    results = {
+      { type = "fluid", name = "methane", amount = 20 }
+    },
+  }, true),
+
+  zen.lib.recipe.duplicateFromRaw("light-oil-cracking", {
+    name = "propene-cracking",
+    ingredients = {
+      { type = "fluid", name = "propene", amount = 30 },
+      { type = "fluid", name = "water", amount = 30 },
+    },
+    results = {
+      { type = "fluid", name = "benzene", amount = 20 }
+    },
   }, true),
 })
