@@ -58,7 +58,7 @@ data:extend({
     },
     icon = "__zenith-chemistry__/graphics/technology/basic-chemistry.png",
     prerequisites = { "natural-gas-processing" }
-  })
+  }),
 
   zen.lib.tech.duplicateFromRaw("advanced-oil-processing", {
     name = "crystal-processing",

@@ -1,16 +1,16 @@
-function crystal(color, synAdditive, comAdditive, rResult, gResult, bResult)
+function crystal(color, synAdditive, comAdditive, rResult, gResult, bResult, prereqs)
   data:extend({
     zen.lib.item.duplicateFromRaw("uranium-ore", {
       name = rResult,
-      icon = "__zenith-chemistry/graphics/icons/" .. rResult .. ".png"
+      icon = "__zenith-chemistry__/graphics/icons/" .. rResult .. ".png"
     }),
     zen.lib.item.duplicateFromRaw("uranium-ore", {
       name = gResult,
-      icon = "__zenith-chemistry/graphics/icons/" .. gResult .. ".png"
+      icon = "__zenith-chemistry__/graphics/icons/" .. gResult .. ".png"
     }),
     zen.lib.item.duplicateFromRaw("uranium-ore", {
       name = bResult,
-      icon = "__zenith-chemistry/graphics/icons/" .. bResult .. ".png"
+      icon = "__zenith-chemistry__/graphics/icons/" .. bResult .. ".png"
     }),
     zen.lib.recipe.duplicateFromRaw("wood", {
       name = color .. "-crystal-synthesis",
@@ -50,6 +50,12 @@ function crystal(color, synAdditive, comAdditive, rResult, gResult, bResult)
       result_amount = 1,
       energy_required = 10
     }),
+
+    zen.lib.item.duplicateFromRaw("uranium-ore", {
+      name = color .. "-czochralski-crystal",
+      icon = "__zenith-chemistry__/graphics/icons/" .. color .. "-czochralski-crystal.png"
+    }),
+
     zen.lib.recipe.duplicateFromRaw("wood", {
       name = bResult,
       category = "chemistry",
@@ -64,7 +70,8 @@ function crystal(color, synAdditive, comAdditive, rResult, gResult, bResult)
       energy_required = 10
     }),
 
-    zen.lib.tech.duplicateFromRaw("wood", {
+
+    zen.lib.tech.duplicateFromRaw("advanced-material-processing", {
       name = color .. "-crystal-processing",
       effects = {
         {
@@ -83,11 +90,15 @@ function crystal(color, synAdditive, comAdditive, rResult, gResult, bResult)
           type = "unlock-recipe",
           recipe = bResult
         },
-      }
+      },
+      prerequisites = prereqs
     }),
   })
 end
 
-crystal("red",   "water", "sulfuric-acid",  "rose-quartz",  "prasiolite",  "ametrine")
-crystal("green", "water", "ethylbenzene",   "agate",        "aventurine",  "onyx")
-crystal("blue",  "water", "propene",        "smoky-quartz", "moss-agate",  "citrine")
+crystal("red",   "water", "sulfuric-acid", "rose-quartz",  "prasiolite",  "ametrine",
+{ "red-alien-processing",   "natural-gas-processing" })
+crystal("green", "water", "ethylbenzene",  "agate",        "aventurine",  "onyx",
+{ "green-alien-processing", "natural-gas-processing" })
+crystal("blue",  "water", "propene",       "smoky-quartz", "moss-agate",  "citrine",
+{ "blue-alien-processing",  "natural-gas-processing" })

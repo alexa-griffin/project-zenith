@@ -1,4 +1,4 @@
-function zen.bio.alien(color, order, poison, result)
+function zen.bio.alien(color, order, poison, result, main)
   data:extend({
     zen.lib.item.duplicateFromRaw("iron-ore", {
       name = color .. "-alien-spores",
@@ -55,8 +55,8 @@ function zen.bio.alien(color, order, poison, result)
         { "nutrient-paste", 10 },
       },
       energy_required = 120,
-      results = result
-      }
+      results = result,
+      main_product = main
     }, true),
 
     zen.lib.recipe.duplicateFromRaw("iron-plate", {
@@ -110,29 +110,29 @@ end
 
 zen.bio.colors = {"red", "orange", "yellow", "green", "cyan", "blue", "purple", "pink", "white", "black"}
 
-zen.bio.alien("red",    "a", "sulfuric-acid", {{ type = "fluid", name = "bio-hydrogen",              amount = 2  }})
-zen.bio.alien("orange", "b", "sulfuric-acid", {{ type = "item",  name = "bio-hydrogen",              amount = 2  }})
-zen.bio.alien("cyan",   "e", "sulfuric-acid", {{ type = "item",  name = "raw-cellulose",             amount = 2  }})
-zen.bio.alien("purple", "g", "sulfuric-acid", {{ type = "item",  name = "raw-cellulose",             amount = 2  }})
-zen.bio.alien("pink",   "h", "sulfuric-acid", {{ type = "item",  name = "raw-cellulose",             amount = 2  }})
-zen.bio.alien("white",  "i", "sulfuric-acid", {{ type = "fluid", name = "sodium-hypochlorite",       amount = 10 }})
-zen.bio.alien("black",  "j", "sulfuric-acid", {{ type = "fluid", name = "sodium-hypochlorite",       amount = 10 }})
+zen.bio.alien("yellow",  "a", "sulfuric-acid", {{ type = "item" , name = "bio-hydrogen",              amount = 2  }})
+zen.bio.alien("orange",  "b", "sulfuric-acid", {{ type = "item",  name = "bio-hydrogen",              amount = 2  }})
+zen.bio.alien("cyan",    "e", "sulfuric-acid", {{ type = "item",  name = "raw-cellulose",             amount = 2  }})
+zen.bio.alien("purple",  "g", "sulfuric-acid", {{ type = "item",  name = "raw-cellulose",             amount = 2  }})
+zen.bio.alien("pink",    "h", "sulfuric-acid", {{ type = "item",  name = "raw-cellulose",             amount = 2  }})
+zen.bio.alien("white",   "i", "sulfuric-acid", {{ type = "fluid", name = "sodium-hypochlorite",       amount = 10 }})
+zen.bio.alien("black",   "j", "sulfuric-acid", {{ type = "fluid", name = "sodium-hypochlorite",       amount = 10 }})
 
-zen.bio.alien("yellow", "c", "sulfuric-acid", {
-  { type = "item",  name = "red-czochralski-starter",    amount = 8, probability = 0.5  }
-  { type = "item",  name = "green-czochralski-starter",  amount = 8, probability = 0.5  }
-  { type = "item",  name = "blue-czochralski-starter",   amount = 8, probability = 0.5  }
-})
+zen.bio.alien("red", "c", "sulfuric-acid", {
+  { type = "item",  name = "red-czochralski-starter",    amount = 8, probability = 0.5  },
+  { type = "item",  name = "green-czochralski-starter",  amount = 8, probability = 0.2  },
+  { type = "item",  name = "blue-czochralski-starter",   amount = 8, probability = 0.2  }
+}, "red-czochralski-starter")
 zen.bio.alien("green",  "d", "sulfuric-acid", {
-  { type = "item",  name = "red-czochralski-starter",    amount = 8, probability = 0.5  }
-  { type = "item",  name = "green-czochralski-starter",  amount = 8, probability = 0.5  }
-  { type = "item",  name = "blue-czochralski-starter",   amount = 8, probability = 0.5  }
-})
+  { type = "item",  name = "red-czochralski-starter",    amount = 8, probability = 0.2  },
+  { type = "item",  name = "green-czochralski-starter",  amount = 8, probability = 0.5  },
+  { type = "item",  name = "blue-czochralski-starter",   amount = 8, probability = 0.2  }
+}, "green-czochralski-starter")
 zen.bio.alien("blue",   "f", "sulfuric-acid", {
-  { type = "item",  name = "red-czochralski-starter",   amount = 8, probability = 0.5  }
-  { type = "item",  name = "green-czochralski-starter", amount = 8, probability = 0.5  }
+  { type = "item",  name = "red-czochralski-starter",   amount = 8, probability = 0.2  },
+  { type = "item",  name = "green-czochralski-starter", amount = 8, probability = 0.2  },
   { type = "item",  name = "blue-czochralski-starter",  amount = 8, probability = 0.5  }
-})
+}, "blue-czochralski-starter")
 
 
 
