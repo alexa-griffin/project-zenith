@@ -42,6 +42,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "cyanide"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "hydrazine"
       }
     },
     icon = "__zenith-chemistry__/graphics/technology/basic-chemistry.png",

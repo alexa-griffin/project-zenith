@@ -157,4 +157,17 @@ data:extend({
     },
     energy_required = 15
   }, true),
+
+  zen.lib.recipe.duplicateFromRaw("sulfuric-acid", {
+    name = "hydrazine",
+    ingredients = {
+      { type = "fluid", name = "ammonia", amount = 20 },
+      { type = "fluid", name = "sodium-hypochlorite", amount = 20 }
+      { type = "fluid", name = "ferric-ore", amount = 2 }
+    },
+    results = {
+      { type = "fluid", name = "hydrazine", amount = 20 }
+    },
+    energy_required = 12.5
+  }, true),
 })

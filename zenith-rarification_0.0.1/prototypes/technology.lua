@@ -50,10 +50,6 @@ data:extend({
         type = "unlock-recipe",
         recipe = "cupric-ore-cyanidation"
       },
-      {
-        type = "unlock-recipe",
-        recipe = "chemical-plant"
-      },
     },
     unit =
     {
@@ -84,11 +80,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "cupric-waste-treatment"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "chemical-plant"
+        recipe = "ferric-waste-treatment"
       },
     },
     unit =
