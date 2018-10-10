@@ -12,6 +12,12 @@ zen.lib.recipe.replaceResult("basic-oil-processing", "petroleum-gas", "ethylene"
   amount = 40
 })
 
+zen.lib.recipe.replaceResult("light-oil-cracking", "petroleum-gas", "ethylene", {
+  amount = 20
+})
+
+data.raw["recipe"]["light-oil-cracking"].icon = "__zenith-chemistry__/graphics/icons/light-oil-cracking"
+
 data.raw["recipe"]["rocket-fuel"].category = "chemistry"
 data.raw["recipe"]["rocket-fuel"].ingredients = {
   { type = "item", name = "rocket-fuel-igniter", amount = 1 },

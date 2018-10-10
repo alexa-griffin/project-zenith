@@ -27,6 +27,18 @@ data:extend({
         type = "unlock-recipe",
         recipe = "bio-fuel-from-propene"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "benzene-cracking"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "benzene-cracking"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "propene-cracking"
+      }
     },
     prerequisites = { "advanced-oil-processing" }
   }),

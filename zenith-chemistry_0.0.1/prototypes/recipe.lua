@@ -181,7 +181,7 @@ data:extend({
       { type = "fluid", name = "water", amount = 30 },
     },
     results = {
-      { type = "fluid", name = "petroleum", amount = 20 }
+      { type = "fluid", name = "petroleum-gas", amount = 20 }
     },
   }, true),
 
