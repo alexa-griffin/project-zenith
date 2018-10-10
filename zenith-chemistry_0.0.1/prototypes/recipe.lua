@@ -166,7 +166,7 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "ammonia", amount = 20 },
       { type = "fluid", name = "sodium-hypochlorite", amount = 20 },
-      { type = "item", name = "bio-fuel", amount = 2 }
+      { type = "item",  name = "bio-fuel", amount = 2 }
     },
     results = {
       { type = "fluid", name = "hydrazine", amount = 20 }
