@@ -63,6 +63,28 @@ function crystal(color, synAdditive, comAdditive, rResult, gResult, bResult)
       result_amount = 1,
       energy_required = 10
     }),
+
+    zen.lib.tech.duplicateFromRaw("wood", {
+      name = color .. "-crystal-processing",
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = color .. "-crystal-synthesis",
+        },
+        {
+          type = "unlock-recipe",
+          recipe = rResult
+        },
+        {
+          type = "unlock-recipe",
+          recipe = gResult
+        },
+        {
+          type = "unlock-recipe",
+          recipe = bResult
+        },
+      }
+    }),
   })
 end
 
