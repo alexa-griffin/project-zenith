@@ -114,7 +114,6 @@ data:extend({
         amount_max = 3,
         probability = 0.5,
       },
-
     },
     energy_required = 60
   }, true),
