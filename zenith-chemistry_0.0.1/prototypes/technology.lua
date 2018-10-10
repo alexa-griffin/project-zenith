@@ -17,15 +17,15 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-fuel-from-methane"
+        recipe = "bio-fuel-from-methane"
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-fuel-from-benzene"
+        recipe = "bio-fuel-from-benzene"
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-fuel-from-propene"
+        recipe = "bio-fuel-from-propene"
       },
     },
     prerequisites = { "advanced-oil-processing" }

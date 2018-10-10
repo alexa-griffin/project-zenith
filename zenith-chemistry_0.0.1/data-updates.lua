@@ -19,6 +19,9 @@ data.raw["recipe"]["rocket-fuel"].ingredients = {
   { type = "item", name = zen.logistics and "scandium-pipe" or "pipe", amount = 1 },
 }
 
+data.raw["item"]["rocket-fuel"].fuel_value = "350MJ"
+
+
 -- tech
 zen.lib.tech.addPack("sulfur-processing", "science-pack-3")
 zen.lib.tech.addPrereq("sulfur-processing", "advanced-oil-processing")
@@ -26,6 +29,7 @@ zen.lib.tech.addPrereq("sulfur-processing", "advanced-oil-processing")
 zen.lib.tech.addRecipeUnlock("plastics", "raw-polyethylene")
 
 zen.lib.tech.replaceRecipeUnlock("oil-processing", "solid-fuel-from-petroleum-gas", "solid-fuel-from-ethylene")
+zen.lib.tech.addRecipeUnlock("advanced-oil-processing", "solid-fuel-from-petroleum-gas")
 
 zen.lib.tech.addRecipeUnlock("rocket-silo", "rocket-fuel-igniter")
 zen.lib.tech.addRecipeUnlock("rocket-silo", "rocket-fuel-burner")
