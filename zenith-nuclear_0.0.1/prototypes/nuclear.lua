@@ -150,7 +150,7 @@ function createNuclearItem (settings)
       category = "centrifuging",
       ingredients = {
         { settings.name .. "-ore", 160 },
-        { "bio-pionium", 1 },
+        { "pionium", 1 },
       },
       icon_size = 32,
       subgroup = "intermediate-product",
