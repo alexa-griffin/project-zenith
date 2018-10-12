@@ -1,6 +1,6 @@
 data:extend({
   zen.lib.tech.duplicateFromRaw("nuclear-power", {
-    name = "nuclear-processing-1",
+    name = "nuclear-processing",
     icon = "__zenith-nuclear__/graphics/technology/nuclear-processing.png",
     effects = {
       {
@@ -56,7 +56,7 @@ data:extend({
         recipe = "pionium"
       },
     },
-    prerequisites = { "electronics", "concrete" },
+    prerequisites = { "nuclear-processing" },
     unit = {
       ingredients = {
         {"science-pack-1", 1},
@@ -93,7 +93,7 @@ data:extend({
         recipe = "plutonium-processing"
       },
     },
-    prerequisites = { "electronics", "concrete" },
+    prerequisites = { "nuclear-processing-2", "concrete" },
     unit = {
       ingredients = {
         {"science-pack-1", 1},
