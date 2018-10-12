@@ -8,6 +8,7 @@ zen.lib.tech.addRecipeUnlock("nuclear-fuel-reprocessing", "plutonium-fuel-reproc
 zen.lib.tech.addRecipeUnlock("nuclear-fuel-reprocessing", "thorium-fuel-reprocessing")
 
 zen.lib.tech.addPrereq("nuclear-power", "nuclear-processing-2")
+zen.lib.tech.addPrereq("kovarex-enrichment-processing", "nuclear-processing-2")
 
 zen.lib.recipe.addIngredient("nuclear-fuel", "plutonium-239")
 zen.lib.recipe.addIngredient("nuclear-fuel", "thorium-230")
