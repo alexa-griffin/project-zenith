@@ -1,5 +1,5 @@
 data:extend({
-  zen.lib.item.duplicateFromRaw("electronic-circuit", {
+  zen.lib.recipe.duplicateFromRaw("electronic-circuit", {
     name = "quantum-computer",
     ingredients = {
       { "nuclear-polymer", 2 },
@@ -9,7 +9,7 @@ data:extend({
     },
     result = "quantum-computer",
   }),
-  zen.lib.item.duplicateFromRaw("copper-cable", {
+  zen.lib.recipe.duplicateFromRaw("copper-cable", {
     name = "tinned-cable",
     ingredients = {
       { "copper-cable", 2 },
@@ -17,7 +17,7 @@ data:extend({
     },
     result = "tinned-cable",
   }),
-  zen.lib.item.duplicateFromRaw("copper-cable", {
+  zen.lib.recipe.duplicateFromRaw("copper-cable", {
     name = "bronze-cable",
     ingredients = {
       { "copper-cable", 2 },
@@ -27,7 +27,7 @@ data:extend({
     result = "bronze-cable",
     result_count = 4
   }),
-  zen.lib.item.duplicateFromRaw("copper-cable", {
+  zen.lib.recipe.duplicateFromRaw("copper-cable", {
     name = "gilded-cable",
     ingredients = {
       { "bronze-cable", 2 },
@@ -35,7 +35,7 @@ data:extend({
     },
     result = "gilded-cable",
   }),
-  zen.lib.item.duplicateFromRaw("plastic-bar", {
+  zen.lib.recipe.duplicateFromRaw("plastic-bar", {
     name = "bio-polymer",
     ingredients = {
       { "raw-cellulose", 2 },
@@ -44,7 +44,7 @@ data:extend({
     },
     result = "bio-polymer",
   }),
-  zen.lib.item.duplicateFromRaw("plastic-bar", {
+  zen.lib.recipe.duplicateFromRaw("plastic-bar", {
     name = "nuclear-polymer",
     ingredients = {
       { "thorium-230", 2 },
