@@ -1,1 +1,5 @@
+if not zen then zen = {} end
+if not zen.processing then zen.processing = {} end
 
+require("prototypes.item")
+require("prototypes.recipe")
