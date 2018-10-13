@@ -23,7 +23,8 @@ function zen.bio.alien(color, order, poison, result, main)
       subgroup = "raw-resource",
       order = "z-a-" .. order,
       ingredients = {
-        { color .. "-alien-spores", 4 }
+        { color .. "-alien-spores", 4 },
+        { type = "fluid", name = "sulfuric-acid", amount = 5 }
       },
       result = "nutrient-paste",
       icon = "__zenith-bio__/graphics/icons/nutrient-paste-from-" .. color .. "-alien-spores.png",
@@ -67,6 +68,7 @@ function zen.bio.alien(color, order, poison, result, main)
       order = "z-d-" .. order,
       ingredients = {
         { color .. "-alien", 1 },
+        { type = "fluid", name = "water", amount = 100 },
         { type = "fluid", name = poison, amount = 5 }
       },
       energy_required = 120,

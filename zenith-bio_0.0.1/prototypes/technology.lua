@@ -18,7 +18,7 @@ data:extend({
     }
   }),
 
-  zen.lib.tech.duplicateFromRaw("advanced-material-processing", {
+  zen.lib.tech.duplicateFromRaw("advanced-material-processing-2", {
     name = "bio-processing-2",
     icon = "__zenith-bio__/graphics/technology/bio-processing.png",
     prerequisites = { "bio-processing-1" },

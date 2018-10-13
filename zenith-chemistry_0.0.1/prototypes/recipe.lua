@@ -176,6 +176,7 @@ data:extend({
 
   zen.lib.recipe.duplicateFromRaw("light-oil-cracking", {
     name = "ethylene-cracking",
+    icon = "__zenith-chemistry__/graphics/icons/ethylene-cracking.png",
     ingredients = {
       { type = "fluid", name = "ethylene", amount = 30 },
       { type = "fluid", name = "water", amount = 30 },
