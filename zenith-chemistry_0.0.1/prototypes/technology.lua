@@ -13,10 +13,6 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "ethylbenzene"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "bio-fuel-from-methane"
       },
       {
