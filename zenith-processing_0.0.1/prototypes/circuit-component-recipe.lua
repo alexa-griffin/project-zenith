@@ -1,6 +1,7 @@
 data:extend({
   zen.lib.recipe.duplicateFromRaw("copper-cable", {
     name = "bio-computer",
+    enabled = false,
     ingredients = {
       { "gilded-cable", 8 },
       { "bio-polymer", 2 },
@@ -12,6 +13,7 @@ data:extend({
   }, true),
   zen.lib.recipe.duplicateFromRaw("copper-cable", {
     name = "electronic-component",
+    enabled = false,
     ingredients = {
       { "electronic-circuit", 1 },
       { "copper-plate", 2 },
@@ -21,6 +23,7 @@ data:extend({
   }, true),
   zen.lib.recipe.duplicateFromRaw("copper-cable", {
     name = "advanced-electronic-component",
+    enabled = false,
     ingredients = {
       { "advanced-circuit", 2 },
       { "plastic-bar", 2 },
@@ -32,6 +35,7 @@ data:extend({
   }, true),
   zen.lib.recipe.duplicateFromRaw("copper-cable", {
     name = "bio-component",
+    enabled = false,
     ingredients = {
       { "processing-unit", 2 },
       { "electronic-component", 2 },
@@ -43,6 +47,7 @@ data:extend({
   }, true),
   zen.lib.recipe.duplicateFromRaw("copper-cable", {
     name = "tinned-cable",
+    enabled = false,
     ingredients = {
       { "copper-cable", 2 },
       { "tin-plate", 1 },
@@ -51,6 +56,7 @@ data:extend({
   }, true),
   zen.lib.recipe.duplicateFromRaw("copper-cable", {
     name = "bronze-cable",
+    enabled = false,
     ingredients = {
       { "copper-cable", 2 },
       { "tinned-cable", 2 },
@@ -61,6 +67,7 @@ data:extend({
   }, true),
   zen.lib.recipe.duplicateFromRaw("copper-cable", {
     name = "gilded-cable",
+    enabled = false,
     ingredients = {
       { "bronze-cable", 2 },
       { "gold-plate", 1 },
@@ -69,6 +76,7 @@ data:extend({
   }, true),
   zen.lib.recipe.duplicateFromRaw("copper-cable", {
     name = "bio-polymer",
+    enabled = false,
     category = "crafting-with-fluid",
     ingredients = {
       { "raw-cellulose", 2 },
@@ -79,6 +87,7 @@ data:extend({
   }, true),
   zen.lib.recipe.duplicateFromRaw("copper-cable", {
     name = "nuclear-polymer",
+    enabled = false,
     category = "crafting-with-fluid",
     ingredients = {
       { "thorium-230", 2 },

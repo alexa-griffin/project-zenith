@@ -26,6 +26,7 @@ zen.lib.tech.addRecipeUnlock("nuclear-processing-2", "nuclear-polymer")
 
 zen.lib.tech.addPrereq("rocket-silo", "effectivity-module-3")
 zen.lib.tech.addPrereq("rocket-silo", "natural-gas-processing")
+zen.lib.tech.addPrereq("rocket-silo", "nuclear-engine")
 zen.lib.tech.replacePrereq("rocket-silo", "advanced-electronics-2", "advanced-electronics-3")
 
 
