@@ -35,7 +35,7 @@ data:extend({
       { "thorium-230", 2 },
       { "steel-plate", 4 },
       { "advanced-circuit", 4 },
-      { "thorium-239", 2 }
+      { "plutonium-239", 2 }
     },
     results = {
       { type = "item", name = "uranium-carbide", amount = 1 }

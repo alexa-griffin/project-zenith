@@ -17,7 +17,7 @@ data.raw["recipe"]["low-density-structure"].normal.ingredients = {
   { "steel-plate", 10 },
   { "tin-plate", 5 },
   { "copper-plate", 5 },
-},
+}
 
 data.raw["recipe"]["low-density-structure"].expensive.ingredients = {
   { "bio-polymer", 10 },
@@ -27,7 +27,7 @@ data.raw["recipe"]["low-density-structure"].expensive.ingredients = {
   { "steel-plate", 10 },
   { "tin-plate", 10 },
   { "copper-plate", 10 },
-},
+}
 
 
 data.raw.item["stone"].icon = "__zenith-rarification__/graphics/icons/stone.png"
