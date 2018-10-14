@@ -67,8 +67,9 @@ data:extend({
     },
     result = "gilded-cable",
   }, true),
-  zen.lib.recipe.duplicateFromRaw("plastic-bar", {
+  zen.lib.recipe.duplicateFromRaw("copper-cable", {
     name = "bio-polymer",
+    category = "crafting-with-fluid",
     ingredients = {
       { "raw-cellulose", 2 },
       { "raw-polyethylene", 4 },
@@ -76,8 +77,9 @@ data:extend({
     },
     result = "bio-polymer",
   }, true),
-  zen.lib.recipe.duplicateFromRaw("plastic-bar", {
+  zen.lib.recipe.duplicateFromRaw("copper-cable", {
     name = "nuclear-polymer",
+    category = "crafting-with-fluid",
     ingredients = {
       { "thorium-230", 2 },
       { "pionium", 2 },

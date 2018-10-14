@@ -6,11 +6,13 @@ zen.lib.recipe.replaceIngredient("processing-unit", "electronic-circuit", "elect
 
 zen.lib.recipe.addIngredient("production-science-pack", "nutrient-paste", 90)
 
-zen.lib.recipe.addIngredient("processing-unit", "nuclear-polymer", 2)
+zen.lib.recipe.addIngredient("processing-unit", "bio-polymer", 2)
 
 zen.lib.tech.addRecipeUnlock("tin-processing", "tinned-cable")
 zen.lib.tech.addRecipeUnlock("tin-processing", "bronze-cable")
 zen.lib.tech.addRecipeUnlock("gold-processing", "gilded-cable")
+
+zen.lib.tech.addRecipeUnlock("nuclear-processing-2", "nuclear-polymer")
 
 
 zen.lib.tech.addRecipeUnlock("advanced-electronics", "electronic-component")
@@ -34,16 +36,16 @@ end
 if not zen.modules then
   data.raw["recipe"]["rocket-control-unit"].ingredients = {
     { "bio-computer", 2 },
-    { "speed-module-3", 1 }
-    { "productivity-module-3", 1 }
+    { "speed-module-3", 1 },
+    { "productivity-module-3", 1 },
     { "effectivity-module-3", 1 }
   },
 
-  zen.librecipe.replaceIngredient("speed-module-3", "advanced-circuit", "bio-computer")
+  zen.lib.recipe.replaceIngredient("speed-module-3", "advanced-circuit", "bio-computer")
 
-  zen.librecipe.replaceIngredient("productivity-module-3", "advanced-circuit", "bio-computer")
+  zen.lib.recipe.replaceIngredient("productivity-module-3", "advanced-circuit", "bio-computer")
 
-  zen.librecipe.replaceIngredient("effectivity-module-3", "advanced-circuit", "bio-computer")
+  zen.lib.recipe.replaceIngredient("effectivity-module-3", "advanced-circuit", "bio-computer")
 
 
 end
