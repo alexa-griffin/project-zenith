@@ -30,6 +30,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "propene-cracking"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "natural-lubricant"
       }
     },
     prerequisites = { "advanced-oil-processing" }

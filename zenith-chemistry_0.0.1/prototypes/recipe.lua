@@ -212,7 +212,6 @@ data:extend({
 
   zen.lib.recipe.duplicateFromRaw("lubricant", {
     name = "natural-lubricant",
-    icon = "__zenith-chemistry__/graphics/icons/natural-lubricant.png",
     ingredients = {
       { type = "fluid", name = "lubricant", amount = 30 },
       { type = "fluid", name = "propene", amount = 30 },
