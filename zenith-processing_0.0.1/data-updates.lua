@@ -9,7 +9,7 @@ zen.lib.recipe.removeIngredient("satellite", "solar-panel")
 
 zen.lib.recipe.addIngredient("production-science-pack", "nutrient-paste", 90)
 
-zen.lib.recipe.addIngredient("processing-unit", "bio-polymer", 2)
+zen.lib.recipe.addIngredient("processing-unit", "nuclear-polymer", 2)
 
 zen.lib.recipe.addIngredient("high-tech-science-pack", "fusion-reactor", 2)
 
@@ -21,6 +21,10 @@ zen.lib.tech.addRecipeUnlock("tin-processing", "bronze-cable")
 zen.lib.tech.addRecipeUnlock("gold-processing", "gilded-cable")
 
 zen.lib.tech.addRecipeUnlock("nuclear-processing-2", "nuclear-polymer")
+
+zen.lib.tech.addPrereq("rocket-silo", "effectivity-module-3")
+zen.lib.tech.addPrereq("rocket-silo", "natural-gas-processing")
+zen.lib.tech.replacePrereq("rocket-silo", "advanced-electronics-2", "advanced-electronics-3")
 
 
 zen.lib.tech.addRecipeUnlock("advanced-electronics", "electronic-component")

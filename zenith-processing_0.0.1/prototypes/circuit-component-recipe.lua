@@ -3,7 +3,7 @@ data:extend({
     name = "bio-computer",
     ingredients = {
       { "gilded-cable", 8 },
-      { "nuclear-polymer", 2 },
+      { "bio-polymer", 2 },
       { "electronic-component", 10 },
       { "advanced-electronic-component", 5 },
       { "bio-component", 2 },
