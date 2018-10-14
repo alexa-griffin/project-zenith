@@ -4,7 +4,7 @@ data:extend({
     ingredients = {
       { "gilded-cable", 8 },
       { "nuclear-polymer", 2 },
-      { "electronic-component", 20 },
+      { "electronic-component", 10 },
       { "advanced-electronic-component", 5 },
       { "quantum-component", 2 },
     },
@@ -17,6 +17,7 @@ data:extend({
       { "copper-plate", 2 },
     },
     result = "electronic-component",
+    result_count = 8,
   }, true),
   zen.lib.recipe.duplicateFromRaw("copper-cable", {
     name = "advanced-electronic-component",
@@ -27,6 +28,7 @@ data:extend({
       { "bronze-plate", 2 },
     },
     result = "advanced-electronic-component",
+    result_count = 6,
   }, true),
   zen.lib.recipe.duplicateFromRaw("copper-cable", {
     name = "quantum-component",
@@ -37,6 +39,7 @@ data:extend({
       { "bronze-plate", 2 },
     },
     result = "quantum-component",
+    result_count = 4,
   }, true),
   zen.lib.recipe.duplicateFromRaw("copper-cable", {
     name = "tinned-cable",

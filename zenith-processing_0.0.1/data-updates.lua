@@ -10,9 +10,10 @@ zen.lib.tech.addRecipeUnlock("tin-processing", "tinned-cable")
 zen.lib.tech.addRecipeUnlock("tin-processing", "bronze-cable")
 zen.lib.tech.addRecipeUnlock("gold-processing", "gilded-cable")
 
-zen.lib.tech.addRecipeUnlock("electronics", "electronic-component")
-zen.lib.tech.addRecipeUnlock("advanced-electronics", "advanced-electronic-component")
-zen.lib.tech.addRecipeUnlock("advanced-electronics-2", "quantum-component")
+zen.lib.tech.addRecipeUnlock("advanced-electronics", "electronic-component")
+zen.lib.tech.addRecipeUnlock("advanced-electronics-2", "electronic-component")
+
+zen.lib.tech.addPrereq("advanced-electronics", "tin-processing")
 
 zen.lib.tech.addRecipeUnlock("green-alien-processing", "bio-polymer")
 zen.lib.tech.addRecipeUnlock("cyan-alien-processing", "bio-polymer")
