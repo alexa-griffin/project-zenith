@@ -31,9 +31,8 @@ data:extend({
       count = 350
     },
   }),
-  zen.lib.tech.duplicateFromRaw("electric-engine", {
+  zen.lib.tech.duplicateFromRaw("engine", {
     name = "nuclear-engine",
-    icon = "__zenith-processing__/graphics/technology/nuclear-engine.png",
     prerequisites = {
       "electric-engine",
       "natural-gas-processing",
