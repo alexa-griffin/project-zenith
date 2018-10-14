@@ -11,7 +11,7 @@ end
 
 data.raw["recipe"]["low-density-structure"].normal.ingredients = {
   { "bio-polymer", 5 },
-  { "nuclear-polymer", 5 }
+  { "nuclear-polymer", 5 },
   { "plastic-bar", 5 },
   { "scandium-plate", 10 },
   { "steel-plate", 10 },
@@ -21,7 +21,7 @@ data.raw["recipe"]["low-density-structure"].normal.ingredients = {
 
 data.raw["recipe"]["low-density-structure"].expensive.ingredients = {
   { "bio-polymer", 10 },
-  { "nuclear-polymer", 10 }
+  { "nuclear-polymer", 10 },
   { "plastic-bar", 10 },
   { "scandium-plate", 10 },
   { "steel-plate", 10 },
