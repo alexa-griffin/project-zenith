@@ -55,6 +55,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "pionium"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "fusion-reactor"
+      },
     },
     prerequisites = { "nuclear-processing" },
     unit = {

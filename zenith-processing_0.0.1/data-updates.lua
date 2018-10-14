@@ -4,9 +4,14 @@ zen.lib.recipe.replaceIngredient("advanced-circuit", "electronic-circuit", "elec
 zen.lib.recipe.replaceIngredient("processing-unit", "advanced-circuit", "bronze-cable", 4)
 zen.lib.recipe.replaceIngredient("processing-unit", "electronic-circuit", "electronic-component", 10)
 
+zen.lib.recipe.replaceIngredient("satellite", "accumulator", "fusion-reactor", 5)
+zen.lib.recipe.removeIngredient("satellite", "solar-panel")
+
 zen.lib.recipe.addIngredient("production-science-pack", "nutrient-paste", 90)
 
 zen.lib.recipe.addIngredient("processing-unit", "bio-polymer", 2)
+
+zen.lib.recipe.addIngredient("high-tech-science-pack", "fusion-reactor", 2)
 
 zen.lib.tech.addRecipeUnlock("tin-processing", "tinned-cable")
 zen.lib.tech.addRecipeUnlock("tin-processing", "bronze-cable")

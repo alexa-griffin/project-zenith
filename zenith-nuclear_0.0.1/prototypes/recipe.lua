@@ -26,4 +26,21 @@ data:extend({
     result_count = 1,
     energy_required = 2,
   }),
+
+  zen.lib.recipe.duplicateFromRaw("sulfur", {
+    name = "fusion-reactor",
+    category = "centrifuging",
+    ingredients = {
+      { "uranium-235", 2 },
+      { "thorium-230", 2 },
+      { "steel-plate", 4 },
+      { "advanced-circuit", 4 },
+      { "thorium-239", 2 }
+    },
+    results = {
+      { type = "item", name = "uranium-carbide", amount = 1 }
+    },
+    result_count = 1,
+    energy_required = 2,
+  }),
 })

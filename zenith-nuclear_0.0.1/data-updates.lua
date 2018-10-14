@@ -17,4 +17,10 @@ zen.lib.recipe.addIngredient("nuclear-fuel", "thorium-230")
 
 if not zen.machines then
   data.raw["assembling-machine"]["centrifuge"].ingredient_count = 8
+  data.raw["recipe"]["centrifuge"].ingredients = {
+    {"stone-brick", 100},
+    {"iron-plate", 4},
+    {"electronic-circuit", 5},
+    {"iron-gear-wheel", 8}
+  }
 end
