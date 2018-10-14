@@ -30,5 +30,32 @@ data:extend({
       time = 30,
       count = 350
     },
+  }),
+  zen.lib.tech.duplicateFromRaw("electric-engine", {
+    name = "nuclear-engine",
+    icon = "__zenith-processing__/graphics/technology/nuclear-engine.png",
+    prerequisites = {
+      "electric-engine",
+      "natural-gas-processing",
+      "scandium-processing",
+      "nuclear-processing-2"
+     },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "nuclear-engine-unit"
+      },
+    },
+    unit = {
+      ingredients = {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+        {"science-pack-3", 1},
+        {"production-science-pack", 1},
+        {"high-tech-science-pack", 1},
+      },
+      time = 30,
+      count = 350
+    },
   })
 })
