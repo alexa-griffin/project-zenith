@@ -1,7 +1,7 @@
 data:extend({
   zen.lib.item.duplicateFromRaw("electronic-circuit", {
-    name = "quantum-computer",
-    icon = "__zenith-processing__/graphics/icons/quantum-computer.png"
+    name = "bio-computer",
+    icon = "__zenith-processing__/graphics/icons/bio-computer.png"
   }),
 
   zen.lib.item.duplicateFromRaw("engine-unit", {

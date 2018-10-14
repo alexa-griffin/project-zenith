@@ -1,14 +1,14 @@
 data:extend({
   zen.lib.recipe.duplicateFromRaw("copper-cable", {
-    name = "quantum-computer",
+    name = "bio-computer",
     ingredients = {
       { "gilded-cable", 8 },
       { "nuclear-polymer", 2 },
       { "electronic-component", 10 },
       { "advanced-electronic-component", 5 },
-      { "quantum-component", 2 },
+      { "bio-component", 2 },
     },
-    result = "quantum-computer",
+    result = "bio-computer",
   }, true),
   zen.lib.recipe.duplicateFromRaw("copper-cable", {
     name = "electronic-component",
@@ -31,14 +31,14 @@ data:extend({
     result_count = 6,
   }, true),
   zen.lib.recipe.duplicateFromRaw("copper-cable", {
-    name = "quantum-component",
+    name = "bio-component",
     ingredients = {
       { "processing-unit", 2 },
       { "electronic-component", 2 },
       { "advanced-electronic-component", 2 },
       { "gold-plate", 2 },
     },
-    result = "quantum-component",
+    result = "bio-component",
     result_count = 4,
   }, true),
   zen.lib.recipe.duplicateFromRaw("copper-cable", {

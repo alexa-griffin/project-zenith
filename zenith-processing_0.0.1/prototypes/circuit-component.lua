@@ -8,8 +8,8 @@ data:extend({
     icon = "__zenith-processing__/graphics/icons/advanced-electronic-component.png"
   }),
   zen.lib.item.duplicateFromRaw("electronic-circuit", {
-    name = "quantum-component",
-    icon = "__zenith-processing__/graphics/icons/quantum-component.png"
+    name = "bio-component",
+    icon = "__zenith-processing__/graphics/icons/bio-component.png"
   }),
   zen.lib.item.duplicateFromRaw("plastic-bar", {
     name = "bio-polymer",
