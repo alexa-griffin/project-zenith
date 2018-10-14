@@ -36,7 +36,7 @@ data:extend({
       { "processing-unit", 2 },
       { "electronic-component", 2 },
       { "advanced-electronic-component", 2 },
-      { "bronze-plate", 2 },
+      { "gold-plate", 2 },
     },
     result = "quantum-component",
     result_count = 4,
@@ -80,6 +80,7 @@ data:extend({
     name = "nuclear-polymer",
     ingredients = {
       { "thorium-230", 2 },
+      { "pionium", 2 },
       { "raw-polyethylene", 4 },
       { type = "fluid", name = "ethylene", amount = 20 },
     },
