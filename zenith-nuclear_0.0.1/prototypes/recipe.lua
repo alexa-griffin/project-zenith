@@ -38,7 +38,7 @@ data:extend({
       { "plutonium-239", 2 }
     },
     results = {
-      { type = "item", name = "uranium-carbide", amount = 1 }
+      { type = "item", name = "fusion-reactor", amount = 1 }
     },
     result_count = 1,
     energy_required = 2,

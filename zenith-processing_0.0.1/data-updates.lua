@@ -13,6 +13,9 @@ zen.lib.recipe.addIngredient("processing-unit", "bio-polymer", 2)
 
 zen.lib.recipe.addIngredient("high-tech-science-pack", "fusion-reactor", 2)
 
+zen.lib.recipe.setIngredientAmount("processing-unit", "sulfuric-acid", 10, "normal")
+zen.lib.recipe.setIngredientAmount("processing-unit", "sulfuric-acid", 20, "expensive")
+
 zen.lib.tech.addRecipeUnlock("tin-processing", "tinned-cable")
 zen.lib.tech.addRecipeUnlock("tin-processing", "bronze-cable")
 zen.lib.tech.addRecipeUnlock("gold-processing", "gilded-cable")

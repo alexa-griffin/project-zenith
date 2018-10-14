@@ -15,6 +15,11 @@ data:extend({
     fuel_category = "chemical",
     fuel_acceleration_multiplier = 4,
     fuel_top_speed_multiplier = 0.95,
+  }),
+
+  zen.lib.item.duplicateFromRaw("engine-unit", {
+    name = "fusion-reactor",
+    icon = "__zenith-nuclear__/graphics/icons/fusion-reactor.png",
   })
 
 })
