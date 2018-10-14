@@ -104,6 +104,18 @@ function zen.lib.tech.removePrereq(tech, prereq)
   end
 end
 
+function zen.lib.tech.replacePrereq(tech, old, new)
+  if data.raw.technology[tech] then
+    zen.lib.tech.addPrereq(tech, new)
+    zen.lib.tech.removePrereq(tech, old)
+  else
+    if not data.raw.technology[tech] then
+      log("technology: \"" .. tech .. "\" does not exist")
+    else
+      log("recipe: \"" .. new .. "\" does not exist")
+    end
+  end
+end
 
 function zen.lib.tech.setAll(key, value, filters)
   function setFunc(toSet)
