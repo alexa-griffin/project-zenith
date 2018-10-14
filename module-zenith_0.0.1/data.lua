@@ -1,1 +1,7 @@
+if not zen then zen = {} end
+if not zen.module then zen.module = {} end
+if not zen.settings then zen.settings = {} end
 
+zen.settings.god_module = settings.startup["zenith-god-module"].value
+zen.settings.pure_module = settings.startup["zenith-pure-module"].value
+zen.settings.large_beacon = settings.startup["zenith-large-beacon"].value
