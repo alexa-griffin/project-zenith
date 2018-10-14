@@ -53,4 +53,10 @@ data:extend({
     base_color = zen.lib.hexToColor("#ff4747"),
     flow_color = zen.lib.hexToColor("#4f1515"),
   }),
+  zen.lib.duplicateFromRaw("fluid", "heavy-oil", {
+    name = "natural-lubricant",
+    icon = "__zenith-chemistry__/graphics/icons/natural-lubricant.png",
+    base_color = zen.lib.hexToColor("#3f230f"),
+    flow_color = zen.lib.hexToColor("#d1a585"),
+  }),
 })
