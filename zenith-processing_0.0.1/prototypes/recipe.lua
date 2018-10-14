@@ -5,6 +5,7 @@ data:extend({
     {
       { "pionium", 3 },
       { "plutonium-239", 3 },
+      { "scandium-plate", 4 },
       { type = "fluid", name = "natural-lubricant", amount = 20 },
       { "advanced-circuit", 2 },
       { "electric-engine-unit", 2 }

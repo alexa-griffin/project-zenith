@@ -13,5 +13,6 @@ require("functions.recipe")
 require("functions.tech")
 
 require("prototypes.item")
+require("prototypes.map-gen-presets")
 
 require("test")
