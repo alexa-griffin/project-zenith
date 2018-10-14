@@ -14,3 +14,7 @@ zen.lib.tech.addPrereq("kovarex-enrichment-processing", "nuclear-processing-2")
 
 zen.lib.recipe.addIngredient("nuclear-fuel", "plutonium-239")
 zen.lib.recipe.addIngredient("nuclear-fuel", "thorium-230")
+
+if not zen.machines then
+  data.raw["assembling-machine"]["centrifuge"].ingredient_count = 8
+end
