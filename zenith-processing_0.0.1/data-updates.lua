@@ -11,6 +11,8 @@ zen.lib.recipe.addIngredient("production-science-pack", "nutrient-paste", 90)
 
 zen.lib.recipe.addIngredient("processing-unit", "nuclear-polymer", 2)
 
+zen.lib.recipe.addIngredient("satellite", "nuclear-engine-unit", 10)
+
 zen.lib.recipe.addIngredient("high-tech-science-pack", "fusion-reactor", 2)
 
 zen.lib.recipe.setIngredientAmount("processing-unit", "sulfuric-acid", 10, "normal")

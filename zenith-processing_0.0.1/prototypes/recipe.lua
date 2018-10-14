@@ -7,7 +7,8 @@ data:extend({
       { "plutonium-239", 3 },
       { type = "fluid", name = "natural-lubricant", amount = 20 },
       { "advanced-circuit", 2 },
-      { "electric-engine", 2 }
+      { "electric-engine-unit", 2 }
     },
+    result = "nuclear-engine-unit"
   })
 })

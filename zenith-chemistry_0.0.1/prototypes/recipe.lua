@@ -209,4 +209,16 @@ data:extend({
       { type = "fluid", name = "benzene", amount = 20 }
     },
   }, true),
+
+  zen.lib.recipe.duplicateFromRaw("lubricant", {
+    name = "natural-lubricant",
+    icon = "__zenith-chemistry__/graphics/icons/natural-lubricant.png",
+    ingredients = {
+      { type = "fluid", name = "lubricant", amount = 30 },
+      { type = "fluid", name = "propene", amount = 30 },
+    },
+    results = {
+      { type = "fluid", name = "natural-lubricant", amount = 40 }
+    },
+  }, true),
 })
