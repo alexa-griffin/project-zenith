@@ -1,6 +1,6 @@
 local alpha = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p"}
 
-function zen.module.generateModule(name, duplicateTarget, effects, recipe, processingRecipe, description, order)
+function zen.module.generateModule(name, duplicateTarget, effects, recipe, processingRecipe, description, order, techDuplicateTarget)
   for  i = 0, 7 do
     data:extend({
       zen.lib.duplicateFromRaw("module", duplicateTarget, {
@@ -42,7 +42,27 @@ function zen.module.generateModule(name, duplicateTarget, effects, recipe, proce
           { name .. "-module-" .. i - 1 .. "-harness", 1 },
         } or {{ name .. "-module-" .. i, 1 }})
       }),
+
+
     })
+    if not i == 0 then
+      data:extend({
+        zen.lib.tech.duplicateFromRaw(techDuplicateTarget, {
+          name = name .. "-module-" .. i + 1,
+          effects = {
+            {
+              type = "unlock-recipe",
+              recipe = name .. "-module-" .. i
+            },
+            {
+              type = "unlock-recipe",
+              recipe = name .. "-module-" .. i .. "-harness"
+            },
+          },
+          prerequisites = { "modules-" .. math.floor(i / 2) or "" }
+        }),
+      })
+    end
   end
 
   for  i = 0, 3 do

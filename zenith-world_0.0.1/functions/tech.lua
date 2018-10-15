@@ -38,6 +38,9 @@ end
 
 function zen.lib.tech.addRecipeUnlock(tech, recipe)
   if data.raw.technology[tech] and data.raw.recipe[recipe] then
+    if not data.raw.technology[tech].effects then
+      data.raw.technology[tech].effects = {}
+    end
     table.insert(data.raw.technology[tech].effects, {
         type = "unlock-recipe",
         recipe = recipe
