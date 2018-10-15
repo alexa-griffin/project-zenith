@@ -9,14 +9,12 @@ local effects = {
   { speed = { bonus = 2   }, consumption = { bonus = 2.5 } },
 }
 
-zen.module.generateModule("speed", "speed-module-1", effects,
+zen.module.generateModule("speed", "speed-module", effects,
   zen.module.generateGenericModuleRecipe("speed"),
   zen.module.generateGenericModuleProcessorRecipe("speed", {
-    {
-      {},
-      {{ "electronic-component", 4 }},
-      {{ "pionium", 4 }},
-      {{ "fusion-reactor", 8 }},
-    }
+    {},
+    {{ "electronic-component", 4 }},
+    {{ "pionium", 4 }},
+    {{ "fusion-reactor", 8 }},
   }),
-  {"item-description.speed-module"})
+  {"item-description.speed-module"}, "c")

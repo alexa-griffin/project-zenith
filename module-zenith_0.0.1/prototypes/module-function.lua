@@ -5,9 +5,9 @@ function zen.module.generateModule(name, duplicateTarget, effects, recipe, proce
     data:extend({
       zen.lib.duplicateFromRaw("module", duplicateTarget, {
         name = name .. "-module-" .. i,
-        icon = "__module-zenith__/graphics/icons/" .. name .. "-module/" .. name "-module-" .. i .. ".png",
+        icon = "__module-zenith__/graphics/icons/" .. name .. "-module/" .. name .. "-module-" .. i .. ".png",
         order = "b-" .. alpha[i + 1],
-        subgroup = name .. "-modules"
+        subgroup = name .. "-modules",
         effects =  effects[i + 1],
         localised_description = description,
         tier = i,
@@ -16,7 +16,7 @@ function zen.module.generateModule(name, duplicateTarget, effects, recipe, proce
 
       zen.lib.item.duplicateFromRaw("electronic-circuit", {
         name = name .. "-module-" .. i .. "-harness",
-        icon = "__module-zenith__/graphics/icons/" .. name .. "-module/" .. name "-module-" .. i .. "-harness.png",
+        icon = "__module-zenith__/graphics/icons/" .. name .. "-module/" .. name .. "-module-" .. i .. "-harness.png",
         order = "a-" .. alpha[i + 1],
         subgroup = name .. "-modules"
       }),
@@ -36,9 +36,10 @@ function zen.module.generateModule(name, duplicateTarget, effects, recipe, proce
         ingredients = recipe[i + 1].module.ingredients,
         energy_required = recipe[i + 1].module.energy_required,
         category = recipe[i + 1].module.category or "crafting",
-        results = recipe.results or (i ~= 1 and {
-          { name .. "-module-" .. i, 1 }
-          { name .. "-module-" .. i - 1 .. "-harness", 1 }
+        main_product = name .. "-module-" .. i,
+        results = recipe.results or (i ~= 0 and {
+          { name .. "-module-" .. i, 1 },
+          { name .. "-module-" .. i - 1 .. "-harness", 1 },
         } or {{ name .. "-module-" .. i, 1 }})
       }),
     })
@@ -47,16 +48,16 @@ function zen.module.generateModule(name, duplicateTarget, effects, recipe, proce
   for  i = 0, 3 do
     data:extend({
       zen.lib.item.duplicateFromRaw("electronic-circuit", {
-        name = name .. "-module-processing-unit-" .. i,
-        icon = "__module-zenith__/graphics/icons/" .. name "-module-processing-unit-" .. i .. ".png",
+        name = name .. "-module-processor-" .. i,
+        icon = "__module-zenith__/graphics/icons/" .. name .. "-module-processor-" .. i .. ".png",
         order = order .. "-" .. alpha[i + 1],
-        subgroup = "modules"
+        subgroup = "module"
       }),
       zen.lib.recipe.duplicateFromRaw("fast-transport-belt", {
-        name = name .. "-module-processing-unit-" .. i,
+        name = name .. "-module-processor-" .. i,
         ingredients = processingRecipe[i + 1].ingredients,
         energy_required = processingRecipe[i + 1].energy_required,
-        result = name .. "-module-processing-unit-" .. i,
+        result = name .. "-module-processor-" .. i,
       }),
     })
   end
@@ -75,7 +76,7 @@ function zen.module.generateGenericModuleRecipe(name)
       module = {
         ingredients = {
           { name .. "-module-0-harness", 1 },
-          { name .. "-module-control-unit-0", 1 },
+          { name .. "-module-processor-0", 1 },
           { "basic-module-contact", 1 },
         },
         energy_required = 10
@@ -94,7 +95,7 @@ function zen.module.generateGenericModuleRecipe(name)
         ingredients = {
           { name .. "-module-1-harness", 1 },
           { name .. "-module-0", 1 },
-          { name .. "-module-control-unit-0", 2 },
+          { name .. "-module-processor-0", 2 },
           { "basic-module-contact", 2 },
         },
         energy_required = 15
@@ -104,7 +105,7 @@ function zen.module.generateGenericModuleRecipe(name)
       harness = {
         ingredients = {
           { "tinned-cable", 3 },
-          { "advaced-circuit", 4 },
+          { "advanced-circuit", 4 },
           { name .. "-module-1-harness", 1 },
         },
         energy_required = 10
@@ -113,7 +114,7 @@ function zen.module.generateGenericModuleRecipe(name)
         ingredients = {
           { name .. "-module-2-harness", 1 },
           { name .. "-module-1", 1 },
-          { name .. "-module-control-unit-1", 3 },
+          { name .. "-module-processor-1", 3 },
           { "module-contact", 3 },
         },
         energy_required = 15
@@ -123,7 +124,7 @@ function zen.module.generateGenericModuleRecipe(name)
       harness = {
         ingredients = {
           { "tinned-cable", 3 },
-          { "advaced-electronic-component", 4 },
+          { "advanced-electronic-component", 4 },
           { name .. "-module-2-harness", 1 },
         },
         energy_required = 10
@@ -132,7 +133,7 @@ function zen.module.generateGenericModuleRecipe(name)
         ingredients = {
           { name .. "-module-3-harness", 1 },
           { name .. "-module-2", 1 },
-          { name .. "-module-control-unit-1", 4 },
+          { name .. "-module-processor-1", 4 },
           { "module-contact", 4 },
         },
         energy_required = 30
@@ -151,7 +152,7 @@ function zen.module.generateGenericModuleRecipe(name)
         ingredients = {
           { name .. "-module-4-harness", 1 },
           { name .. "-module-3", 1 },
-          { name .. "-module-control-unit-2", 6 },
+          { name .. "-module-processor-2", 6 },
           { "advanced-module-contact", 6 },
         },
         energy_required = 60
@@ -170,7 +171,7 @@ function zen.module.generateGenericModuleRecipe(name)
         ingredients = {
           { name .. "-module-5-harness", 1 },
           { name .. "-module-4", 1 },
-          { name .. "-module-control-unit-2", 6 },
+          { name .. "-module-processor-2", 6 },
           { "advanced-module-contact", 6 },
         },
         energy_required = 60
@@ -189,7 +190,7 @@ function zen.module.generateGenericModuleRecipe(name)
         ingredients = {
           { name .. "-module-6-harness", 1 },
           { name .. "-module-5", 1 },
-          { name .. "-module-control-unit-3", 12 },
+          { name .. "-module-processor-3", 12 },
           { "sophisticated-module-contact", 12 },
         },
         energy_required = 120
@@ -214,7 +215,7 @@ function zen.module.generateGenericModuleRecipe(name)
         ingredients = {
           { name .. "-module-7-harness", 1 },
           { name .. "-module-6", 1 },
-          { name .. "-module-control-unit-3", 24 },
+          { name .. "-module-processor-3", 24 },
           { "sophisticated-module-contact", 24 },
         },
         energy_required = 240

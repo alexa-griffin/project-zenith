@@ -54,7 +54,7 @@ function zen.lib.modifyRaw(type, name, overrides)
 end
 
 function zen.lib.hexToColor(hex)
-  local hex = hex:gsub("#","")
+  local hex = hex:gsub("#", "")
   if hex:len() == 3 then
     return {
       r = tonumber("0x" .. hex:sub(1, 1) * 17) / 255,

@@ -1,9 +1,9 @@
 {
  	"name": "module-zenith",
  	"version": "0.0.1",
- 	"title": "",
+ 	"title": "Module Zenith",
  	"author": "Alexa",
  	"factorio_version": "0.16",
- 	"dependencies": ["base >= 0.16"],
- 	"description": ""
+ 	"dependencies": ["base >= 0.16", "zenith-processing", "zenith-world"],
+ 	"description": "adds a fuck ton of modules"
 }
