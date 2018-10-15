@@ -8,7 +8,7 @@ function zen.module.generateModule(name, duplicateTarget, effects, recipe, proce
         icon = "__module-zenith__/graphics/icons/" .. name .. "-module/" .. name .. "-module-" .. i .. ".png",
         order = "b-" .. alpha[i + 1],
         subgroup = name .. "-modules",
-        effects =  effects[i + 1],
+        effect =  effects[i + 1],
         localised_description = description,
         tier = i,
         category = name,
