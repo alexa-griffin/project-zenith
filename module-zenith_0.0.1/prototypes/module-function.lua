@@ -45,7 +45,7 @@ function zen.module.generateModule(name, duplicateTarget, effects, recipe, proce
 
 
     })
-    if not i == 0 then
+    if i ~= 0 then
       data:extend({
         zen.lib.tech.duplicateFromRaw(techDuplicateTarget, {
           name = name .. "-module-" .. i + 1,
@@ -59,7 +59,7 @@ function zen.module.generateModule(name, duplicateTarget, effects, recipe, proce
               recipe = name .. "-module-" .. i .. "-harness"
             },
           },
-          prerequisites = { "modules-" .. math.floor(i / 2) or "" }
+          prerequisites = { "modules" .. (math.floor(i / 2) ~= 0 and "-" .. math.floor(i / 2) + 1 or "") }
         }),
       })
     end
