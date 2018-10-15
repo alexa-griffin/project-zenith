@@ -18,7 +18,7 @@ function zen.module.generateModule(name, duplicateTarget, effects, recipe, proce
         name = name .. "-module-" .. i .. "-harness",
         icon = "__module-zenith__/graphics/icons/" .. name .. "-module/" .. name .. "-module-" .. i .. "-harness.png",
         order = "a-" .. alpha[i + 1],
-        subgroup = name .. "-modules"
+        subgroup = name .. "-module-harnesses"
       }),
 
       zen.lib.recipe.duplicateFromRaw(duplicateTarget, {
@@ -59,7 +59,8 @@ function zen.module.generateModule(name, duplicateTarget, effects, recipe, proce
               recipe = name .. "-module-" .. i .. "-harness"
             },
           },
-          prerequisites = { "modules" .. (math.floor(i / 2) ~= 0 and "-" .. math.floor(i / 2) + 1 or "") }
+          prerequisites = { "modules" .. (math.floor(i / 2) ~= 0 and "-" .. math.floor(i / 2) + 1 or ""),
+                            name .. "-module" .. ((i == 0 or i == 1) and "" or "-" .. i)}
         }),
       })
     end
