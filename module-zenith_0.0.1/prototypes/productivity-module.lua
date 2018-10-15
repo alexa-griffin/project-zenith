@@ -12,9 +12,9 @@ local effects = {
 zen.module.generateModule("productivity", "productivity-module", effects,
   zen.module.generateGenericModuleRecipe("productivity"),
   zen.module.generateGenericModuleProcessorRecipe("productivity", {
-    {},
     {{ "electronic-component", 4 }},
-    {{ "battery", 4 }},
-    {{ "fusion-reactor", 8 }},
+    {{ "advanced-electronic-component", 4 }},
+    {{ "battery", 4 }, { "pionium", 8 }, { "processing-unit", 2 }},
+    {{ "fusion-reactor", 8 }, { "bio-component", 2 }},
   }),
   {"item-description.productivity-module"}, "e", "productivity-module")
