@@ -123,8 +123,8 @@ function zen.module.generateCombinedModule(name, ing1, ing2, duplicateTarget, ef
         results = recipe.results or (i ~= 0 and {
           { name .. "-module-" .. i, 1 },
           { name .. "-module-" .. i - 1 .. "-harness", 1 },
-          { ing1 .. "-module-" .. i - 1 .. "-harness", 1 },
-          { ing2 .. "-module-" .. i - 1 .. "-harness", 1 },
+          { ing1 .. "-module-" .. i .. "-harness", 1 },
+          { ing2 .. "-module-" .. i .. "-harness", 1 },
         } or {{ name .. "-module-" .. i, 1 }})
       }),
     })
