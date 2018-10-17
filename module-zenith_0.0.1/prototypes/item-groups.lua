@@ -1,74 +1,87 @@
 data:extend({
   {
+    type = "item-group",
+    name = "modules",
+    icon = "__module-zenith__/graphics/item-group/module.png",
+    icon_size = 128,
+    order = "c"
+  },
+  {
+    type = "item-subgroup",
+    name = "module-component",
+    group = "modules",
+    order = "a-a"
+  },
+  {
     type = "item-subgroup",
     name = "speed-modules",
-    group = "production",
+    group = "modules",
     order = "g-a"
   },
   {
     type = "item-subgroup",
     name = "speed-module-harnesses",
-    group = "production",
+    group = "modules",
     order = "g-b"
   },
   {
     type = "item-subgroup",
     name = "productivity-modules",
-    group = "production",
+    group = "modules",
     order = "h-a"
   },
   {
     type = "item-subgroup",
     name = "productivity-module-harnesses",
-    group = "production",
+    group = "modules",
     order = "h-b"
   },
   {
     type = "item-subgroup",
     name = "effectivity-modules",
-    group = "production",
+    group = "modules",
     order = "i-a"
   },
   {
     type = "item-subgroup",
     name = "effectivity-module-harnesses",
-    group = "production",
+    group = "modules",
     order = "i-b"
   },
   {
     type = "item-subgroup",
     name = "pure-speed-modules",
-    group = "production",
+    group = "modules",
     order = "j-a"
   },
   {
     type = "item-subgroup",
     name = "pure-speed-module-harnesses",
-    group = "production",
+    group = "modules",
     order = "j-b"
   },
   {
     type = "item-subgroup",
     name = "pure-productivity-modules",
-    group = "production",
+    group = "modules",
     order = "k-a"
   },
   {
     type = "item-subgroup",
     name = "pure-productivity-module-harnesses",
-    group = "production",
+    group = "modules",
     order = "k-b"
   },
   {
     type = "item-subgroup",
     name = "god-modules",
-    group = "production",
+    group = "modules",
     order = "l-a"
   },
   {
     type = "item-subgroup",
     name = "god-module-harnesses",
-    group = "production",
+    group = "modules",
     order = "l-b"
   },
 })

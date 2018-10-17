@@ -12,4 +12,4 @@ local effects = {
 zen.module.generateCombinedModule("god",
   "pure-productivity", "pure-speed", "speed-module",
   effects, zen.module.generateCombinedModuleRecipe("god", "pure-productivity", "pure-speed", true),
-  {"item-description.effectivity-module"}, "d", "speed-module")
+  {"item-description.effectivity-module"}, "d", "speed-module", "__module-zenith__/graphics/technology/god-module.png")

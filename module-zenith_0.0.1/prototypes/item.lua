@@ -3,25 +3,25 @@ data:extend({
   zen.lib.item.duplicateFromRaw("processing-unit", {
     name = "basic-module-contact",
     icon = "__module-zenith__/graphics/icons/basic-module-contact.png",
-    subgroup = "module",
+    subgroup = "module-component",
     order = "a-a"
   }),
   zen.lib.item.duplicateFromRaw("processing-unit", {
     name = "module-contact",
     icon = "__module-zenith__/graphics/icons/module-contact.png",
-    subgroup = "module",
+    subgroup = "module-component",
     order = "a-b"
   }),
   zen.lib.item.duplicateFromRaw("processing-unit", {
     name = "advanced-module-contact",
     icon = "__module-zenith__/graphics/icons/advanced-module-contact.png",
-    subgroup = "module",
+    subgroup = "module-component",
     order = "a-c"
   }),
   zen.lib.item.duplicateFromRaw("processing-unit", {
     name = "sophisticated-module-contact",
     icon = "__module-zenith__/graphics/icons/sophisticated-module-contact.png",
-    subgroup = "module",
+    subgroup = "module-component",
     order = "a-d"
   }),
   zen.lib.recipe.duplicateFromRaw("fast-transport-belt", {
@@ -71,25 +71,25 @@ data:extend({
   zen.lib.item.duplicateFromRaw("processing-unit", {
     name = "module-processor-0",
     icon = "__module-zenith__/graphics/icons/module-processor-0.png",
-    subgroup = "module",
+    subgroup = "module-component",
     order = "b-a"
   }),
   zen.lib.item.duplicateFromRaw("processing-unit", {
     name = "module-processor-1",
     icon = "__module-zenith__/graphics/icons/module-processor-1.png",
-    subgroup = "module",
+    subgroup = "module-component",
     order = "b-b"
   }),
   zen.lib.item.duplicateFromRaw("processing-unit", {
     name = "module-processor-2",
     icon = "__module-zenith__/graphics/icons/module-processor-2.png",
-    subgroup = "module",
+    subgroup = "module-component",
     order = "b-c"
   }),
   zen.lib.item.duplicateFromRaw("processing-unit", {
     name = "module-processor-3",
     icon = "__module-zenith__/graphics/icons/module-processor-3.png",
-    subgroup = "module",
+    subgroup = "module-component",
     order = "b-d"
   }),
   zen.lib.recipe.duplicateFromRaw("fast-transport-belt", {

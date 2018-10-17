@@ -71,7 +71,7 @@ function zen.module.generateModule(name, duplicateTarget, effects, recipe, proce
         name = name .. "-module-processor-" .. i,
         icon = "__module-zenith__/graphics/icons/" .. name .. "-module-processor-" .. i .. ".png",
         order = order .. "-" .. alpha[i + 1],
-        subgroup = "module"
+        subgroup = "module-component"
       }),
       zen.lib.recipe.duplicateFromRaw("fast-transport-belt", {
         name = name .. "-module-processor-" .. i,
