@@ -17,4 +17,5 @@ zen.module.generateModule("effectivity", "effectivity-module", effects,
     {{ "battery", 4 }},
     {{ "fusion-reactor", 8 }},
   }),
-  {"item-description.effectivity-module"}, "d", "effectivity-module")
+  {"item-description.effectivity-module"}, "d", "effectivity-module",
+  zen.module.generateTechUnit(50, zen.settings.module_multiplier))

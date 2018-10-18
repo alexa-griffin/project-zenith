@@ -17,4 +17,5 @@ zen.module.generateModule("speed", "speed-module", effects,
     {{ "pionium", 4 }},
     {{ "fusion-reactor", 8 }},
   }),
-  {"item-description.speed-module"}, "c", "speed-module")
+  {"item-description.speed-module"}, "c", "speed-module",
+  zen.module.generateTechUnit(50, zen.settings.module_multiplier))

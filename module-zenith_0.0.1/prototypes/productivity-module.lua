@@ -17,4 +17,5 @@ zen.module.generateModule("productivity", "productivity-module", effects,
     {{ "battery", 4 }, { "pionium", 8 }, { "processing-unit", 2 }},
     {{ "fusion-reactor", 8 }, { "bio-component", 2 }},
   }),
-  {"item-description.productivity-module"}, "e", "productivity-module")
+  {"item-description.productivity-module"}, "e", "productivity-module",
+  zen.module.generateTechUnit(50, zen.settings.module_multiplier))

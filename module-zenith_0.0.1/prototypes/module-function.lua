@@ -1,6 +1,6 @@
 local alpha = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p"}
 
-function zen.module.generateModule(name, duplicateTarget, effects, recipe, processingRecipe, description, order, techDuplicateTarget)
+function zen.module.generateModule(name, duplicateTarget, effects, recipe, processingRecipe, description, order, techDuplicateTarget, unit)
   for  i = 0, 7 do
     data:extend({
       zen.lib.duplicateFromRaw("module", duplicateTarget, {
@@ -44,25 +44,24 @@ function zen.module.generateModule(name, duplicateTarget, effects, recipe, proce
       }),
     })
 
-    if i ~= 0 then
-      data:extend({
-        zen.lib.tech.duplicateFromRaw(techDuplicateTarget, {
-          name = name .. "-module-" .. i + 1,
-          effects = {
-            {
-              type = "unlock-recipe",
-              recipe = name .. "-module-" .. i
-            },
-            {
-              type = "unlock-recipe",
-              recipe = name .. "-module-" .. i .. "-harness"
-            },
+    data:extend({
+      zen.lib.tech.duplicateFromRaw(techDuplicateTarget, {
+        name = i ~= 0 and name .. "-module-" .. i or (name .. "-module"),
+        effects = {
+          {
+            type = "unlock-recipe",
+            recipe = name .. "-module-" .. i
           },
-          prerequisites = { "modules" .. (math.floor(i / 2) ~= 0 and "-" .. math.floor(i / 2) + 1 or ""),
-                            name .. "-module" .. ((i == 0 or i == 1) and "" or "-" .. i)}
-        }),
-      })
-    end
+          {
+            type = "unlock-recipe",
+            recipe = name .. "-module-" .. i .. "-harness"
+          },
+        },
+        unit = unit[i],
+        prerequisites = { "modules" .. (math.floor(i / 2) ~= 0 and "-" .. math.floor(i / 2) + 1 or ""),
+                          name .. "-module" .. ((i == 0 or i == 1) and "" or "-" .. i)}
+      }),
+    })
   end
 
   for  i = 0, 3 do
@@ -83,7 +82,7 @@ function zen.module.generateModule(name, duplicateTarget, effects, recipe, proce
   end
 end
 
-function zen.module.generateCombinedModule(name, ing1, ing2, duplicateTarget, effects, recipe, description, order, techDuplicateTarget, icon)
+function zen.module.generateCombinedModule(name, ing1, ing2, duplicateTarget, effects, recipe, description, order, techDuplicateTarget, icon, unit)
   for i = 0, 7 do
     data:extend({
       zen.lib.duplicateFromRaw("module", duplicateTarget, {
@@ -142,6 +141,7 @@ function zen.module.generateCombinedModule(name, ing1, ing2, duplicateTarget, ef
             recipe = name .. "-module-" .. i .. "-harness"
           },
         },
+        unit = unit[i]
         prerequisites = { (i == 0 and "modules") or (i == 1 and name .. "-module") or name .. "-module-" .. i - 1,
                           ing1 .. "-module" .. ((i == 0 or i == 1) and "" or ("-" .. i)),
                           ing2 .. "-module" .. ((i == 0 or i == 1) and "" or ("-" .. i)), }
@@ -474,6 +474,87 @@ function zen.module.generateGenericModuleProcessorRecipe(name, additives)
         { "module-processor-3", 1 }
       }, additives[4]),
       energy_required = 10
+    },
+  }
+end
+
+function zen.module.generateTechUnit(base, mult)
+  return {
+    {
+      count = base + (mult * 1),
+      ingredients = {
+        { "science-pack-1", 1 },
+        { "science-pack-2", 1 },
+      },
+      time = 30
+    },
+    {
+      count = base + (mult * 1.5),
+      ingredients = {
+        { "science-pack-1", 1 },
+        { "science-pack-2", 1 },
+      },
+      time = 30
+    },
+    {
+      count = base + (mult * 2),
+      ingredients = {
+        { "science-pack-1", 1 },
+        { "science-pack-2", 1 },
+        { "science-pack-3", 1 },
+      },
+      time = 30
+    },
+    {
+      count = base + (mult * 2.5),
+      ingredients = {
+        { "science-pack-1", 1 },
+        { "science-pack-2", 1 },
+        { "science-pack-3", 1 },
+      },
+      time = 30
+    },
+    {
+      count = base + (mult * 3),
+      ingredients = {
+        { "science-pack-1", 1 },
+        { "science-pack-2", 1 },
+        { "science-pack-3", 1 },
+        { "production-science-pack", 1 },
+      },
+      time = 60
+    },
+    {
+      count = base + (mult * 3.5),
+      ingredients = {
+        { "science-pack-1", 1 },
+        { "science-pack-2", 1 },
+        { "science-pack-3", 1 },
+        { "production-science-pack", 1 },
+      },
+      time = 60
+    },
+    {
+      count = base + (mult * 4),
+      ingredients = {
+        { "science-pack-1", 1 },
+        { "science-pack-2", 1 },
+        { "science-pack-3", 1 },
+        { "production-science-pack", 1 },
+        { "high-tech-science-pack", 1 },
+      },
+      time = 120
+    },
+    {
+      count = base + (mult * 5),
+      ingredients = {
+        { "science-pack-1", 1 },
+        { "science-pack-2", 1 },
+        { "science-pack-3", 1 },
+        { "production-science-pack", 1 },
+        { "high-tech-science-pack", 1 },
+      },
+      time = 120
     },
   }
 end
