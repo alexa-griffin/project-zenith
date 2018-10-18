@@ -5,6 +5,7 @@ if not zen.settings then zen.settings = {} end
 zen.settings.god_module = settings.startup["zenith-god-module"].value
 zen.settings.pure_module = settings.startup["zenith-pure-module"].value
 zen.settings.large_beacon = settings.startup["zenith-large-beacon"].value
+zen.settings.module_multiplier = settings.startup["zenith-module-cost-mult"].value
 
 require("prototypes.item-groups")
 require("prototypes.module-function")

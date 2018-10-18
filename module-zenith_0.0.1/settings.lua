@@ -17,4 +17,10 @@ data:extend({
     setting_type = "startup",
     default_value = false
   },
+  {
+    type = "double-setting",
+    name = "zenith-module-cost-mult",
+    setting_type = "startup",
+    default_value = 1
+  },
 })

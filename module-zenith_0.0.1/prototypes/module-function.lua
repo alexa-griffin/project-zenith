@@ -43,25 +43,26 @@ function zen.module.generateModule(name, duplicateTarget, effects, recipe, proce
         } or {{ name .. "-module-" .. i, 1 }})
       }),
     })
-
-    data:extend({
-      zen.lib.tech.duplicateFromRaw(techDuplicateTarget, {
-        name = i ~= 0 and name .. "-module-" .. i or (name .. "-module"),
-        effects = {
-          {
-            type = "unlock-recipe",
-            recipe = name .. "-module-" .. i
+    if i ~= 0 then
+      data:extend({
+        zen.lib.tech.duplicateFromRaw(techDuplicateTarget, {
+          name = name .. "-module-" .. i + 1,
+          effects = {
+            {
+              type = "unlock-recipe",
+              recipe = name .. "-module-" .. i
+            },
+            {
+              type = "unlock-recipe",
+              recipe = name .. "-module-" .. i .. "-harness"
+            },
           },
-          {
-            type = "unlock-recipe",
-            recipe = name .. "-module-" .. i .. "-harness"
-          },
-        },
-        unit = unit[i],
-        prerequisites = { "modules" .. (math.floor(i / 2) ~= 0 and "-" .. math.floor(i / 2) + 1 or ""),
-                          name .. "-module" .. ((i == 0 or i == 1) and "" or "-" .. i)}
-      }),
-    })
+          unit = unit[i],
+          prerequisites = { "modules" .. (math.floor(i / 2) ~= 0 and "-" .. math.floor(i / 2) + 1 or ""),
+                            name .. "-module" .. ((i == 0 or i == 1) and "" or "-" .. i)}
+        }),
+      })
+    end
   end
 
   for  i = 0, 3 do
@@ -141,7 +142,7 @@ function zen.module.generateCombinedModule(name, ing1, ing2, duplicateTarget, ef
             recipe = name .. "-module-" .. i .. "-harness"
           },
         },
-        unit = unit[i]
+        unit = unit[i],
         prerequisites = { (i == 0 and "modules") or (i == 1 and name .. "-module") or name .. "-module-" .. i - 1,
                           ing1 .. "-module" .. ((i == 0 or i == 1) and "" or ("-" .. i)),
                           ing2 .. "-module" .. ((i == 0 or i == 1) and "" or ("-" .. i)), }
