@@ -48,7 +48,6 @@ if not zen.machines then
   data.raw["assembling-machine"]["assembling-machine-3"].ingredient_count = 10
 end
 
-if not zen.module then
   data.raw["recipe"]["rocket-control-unit"].ingredients = {
     { "bio-computer", 2 },
     { "speed-module-3", 1 },
@@ -56,6 +55,7 @@ if not zen.module then
     { "effectivity-module-3", 1 }
   },
 
+if not zen.module then
   zen.lib.recipe.replaceIngredient("speed-module-3", "advanced-circuit", "bio-computer")
 
   zen.lib.recipe.replaceIngredient("productivity-module-3", "advanced-circuit", "bio-computer")
