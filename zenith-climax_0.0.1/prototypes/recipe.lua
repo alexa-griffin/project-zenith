@@ -89,6 +89,6 @@ data:extend({
     ingredients = {
       { "rocket-silo", 50 },
     },
-    result = "superluminal-thruster",
+    result = "superluminal-rocket-silo",
   }),
 })
