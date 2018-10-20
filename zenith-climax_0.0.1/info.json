@@ -1,9 +1,9 @@
 {
  	"name": "zenith-climax",
  	"version": "0.0.1",
- 	"title": "",
+ 	"title": "Climax Zenith",
  	"author": "Alexa",
  	"factorio_version": "0.16",
- 	"dependencies": ["base >= 0.16"],
- 	"description": ""
+ 	"dependencies": ["base >= 0.16", "zenith-processing", "zenith-world"],
+ 	"description": "Vastly extends the post rocket launch game. Also adds in some less scientific things..."
 }

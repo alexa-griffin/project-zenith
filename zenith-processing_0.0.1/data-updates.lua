@@ -29,7 +29,6 @@ zen.lib.tech.addPrereq("rocket-silo", "natural-gas-processing")
 zen.lib.tech.addPrereq("rocket-silo", "nuclear-engine")
 zen.lib.tech.replacePrereq("rocket-silo", "advanced-electronics-2", "advanced-electronics-3")
 
-
 zen.lib.tech.addRecipeUnlock("advanced-electronics", "electronic-component")
 zen.lib.tech.addRecipeUnlock("advanced-electronics-2", "electronic-component")
 zen.lib.tech.addPrereq("advanced-electronics-2", "nuclear-processing-2")
@@ -44,21 +43,23 @@ zen.lib.tech.addRecipeUnlock("pink-alien-processing", "bio-polymer")
 
 
 if not zen.machines then
+  data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count = 4
   data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count = 6
   data.raw["assembling-machine"]["assembling-machine-3"].ingredient_count = 10
 end
 
-  data.raw["recipe"]["rocket-control-unit"].ingredients = {
-    { "bio-computer", 2 },
-    { "speed-module-3", 1 },
-    { "productivity-module-3", 1 },
-    { "effectivity-module-3", 1 }
-  },
+data.raw["recipe"]["rocket-control-unit"].ingredients = {
+  { "bio-computer", 2 },
+  { "speed-module-3", 1 },
+  { "productivity-module-3", 1 },
+  { "effectivity-module-3", 1 }
+}
+
+
+data.raw["recipe"]["science-pack-3"].result_count = 2
 
 if not zen.module then
   zen.lib.recipe.replaceIngredient("speed-module-3", "advanced-circuit", "bio-computer")
-
   zen.lib.recipe.replaceIngredient("productivity-module-3", "advanced-circuit", "bio-computer")
-
   zen.lib.recipe.replaceIngredient("effectivity-module-3", "advanced-circuit", "bio-computer")
 end
