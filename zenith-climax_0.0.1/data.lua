@@ -2,7 +2,9 @@ if not zen then zen = {} end
 if not zen.climax then zen.climax = {} end
 if not zen.settings then zen.settings = {} end
 
-zen.settings.cost_multiplier = settings.startup["zenith-climax-cost-multiplier"].value
+zen.settings.cost_multiplier = settings.startup["zenith-climax-cost"].value
+
+
 local min = 5400 -- 7!
 zen.climax.superluminalCost = {
   (min / 1) * zen.settings.cost_multiplier,

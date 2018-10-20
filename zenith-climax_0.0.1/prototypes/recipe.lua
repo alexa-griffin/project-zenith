@@ -35,7 +35,7 @@ data:extend({
     result = "superluminal-brain",
   }),
   zen.lib.recipe.duplicateFromRaw("satellite", {
-    name = "superluminal-data-transfer",
+    name = "superluminal-data-transfer-computer",
     ingredients = {
       { "rocket-control-unit", 100 },
       { "speed-module-7", 100 },
@@ -44,14 +44,14 @@ data:extend({
       { "bio-computer", 100 },
       { "radar", 100 },
     },
-    result = "superluminal-data-transfer",
+    result = "superluminal-data-transfer-computer",
   }),
   zen.lib.recipe.duplicateFromRaw("satellite", {
     name = "superluminal-drive",
     ingredients = {
       { "rocket-fuel", 500 },
       { "fusion-reactor", 500 },
-      { "portable-fusion-reactor", 500 },
+      { "fusion-reactor-equipment", 500 },
     },
     result = "superluminal-drive",
   }),
@@ -81,6 +81,13 @@ data:extend({
       { "plutonium-fuel-cell", 500 },
       { "uranium-fuel-cell", 500 },
       { "thorium-fuel-cell", 500 },
+    },
+    result = "superluminal-thruster",
+  }),
+  zen.lib.recipe.duplicateFromRaw("rocket-silo", {
+    name = "superluminal-rocket-silo",
+    ingredients = {
+      { "rocket-silo", 50 },
     },
     result = "superluminal-thruster",
   }),

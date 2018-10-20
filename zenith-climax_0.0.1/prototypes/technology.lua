@@ -1,5 +1,5 @@
 data:extend({
-  zen.tech.duplicateFromRaw("rocket-silo", {
+  zen.lib.tech.duplicateFromRaw("rocket-silo", {
     name = "superluminal-travel",
     icon = "__zenith-climax__/graphics/technology/superluminal-travel.png",
     effects = {
@@ -15,14 +15,14 @@ data:extend({
         { "science-pack-1", 1 },
         { "science-pack-2", 1 },
         { "science-pack-3", 1 },
-        { "production-science-pack", 1 }
-        { "high-tech-science-pack", 1 }
-        { "space-science-pack", 1 }
+        { "production-science-pack", 1 },
+        { "high-tech-science-pack", 1 },
+        { "space-science-pack", 1 },
       },
       time = 60
     },
   }),
-  zen.tech.duplicateFromRaw("rocket-silo", {
+  zen.lib.tech.duplicateFromRaw("rocket-silo", {
     name = "superluminal-travel-2",
     icon = "__zenith-climax__/graphics/technology/superluminal-travel.png",
     effects = {
@@ -31,21 +31,21 @@ data:extend({
         recipe = "superluminal-structure"
       }
     },
-    prerequisites = { "superluminal-travel-1" },
+    prerequisites = { "superluminal-travel" },
     unit = {
       count = zen.climax.superluminalCost[2],
       ingredients = {
         { "science-pack-1", 1 },
         { "science-pack-2", 1 },
         { "science-pack-3", 1 },
-        { "production-science-pack", 1 }
-        { "high-tech-science-pack", 1 }
-        { "space-science-pack", 1 }
+        { "production-science-pack", 1 },
+        { "high-tech-science-pack", 1 },
+        { "space-science-pack", 1 },
       },
       time = 60
     },
   }),
-  zen.tech.duplicateFromRaw("rocket-silo", {
+  zen.lib.tech.duplicateFromRaw("rocket-silo", {
     name = "superluminal-travel-3",
     icon = "__zenith-climax__/graphics/technology/superluminal-travel.png",
     effects = {
@@ -61,14 +61,14 @@ data:extend({
         { "science-pack-1", 1 },
         { "science-pack-2", 1 },
         { "science-pack-3", 1 },
-        { "production-science-pack", 1 }
-        { "high-tech-science-pack", 1 }
-        { "space-science-pack", 1 }
+        { "production-science-pack", 1 },
+        { "high-tech-science-pack", 1 },
+        { "space-science-pack", 1 },
       },
       time = 60
     },
   }),
-  zen.tech.duplicateFromRaw("rocket-silo", {
+  zen.lib.tech.duplicateFromRaw("rocket-silo", {
     name = "superluminal-travel-4",
     icon = "__zenith-climax__/graphics/technology/superluminal-travel.png",
     effects = {
@@ -84,14 +84,14 @@ data:extend({
         { "science-pack-1", 1 },
         { "science-pack-2", 1 },
         { "science-pack-3", 1 },
-        { "production-science-pack", 1 }
-        { "high-tech-science-pack", 1 }
-        { "space-science-pack", 1 }
+        { "production-science-pack", 1 },
+        { "high-tech-science-pack", 1 },
+        { "space-science-pack", 1 },
       },
       time = 60
     },
   }),
-  zen.tech.duplicateFromRaw("rocket-silo", {
+  zen.lib.tech.duplicateFromRaw("rocket-silo", {
     name = "superluminal-travel-5",
     icon = "__zenith-climax__/graphics/technology/superluminal-travel.png",
     effects = {
@@ -107,14 +107,14 @@ data:extend({
         { "science-pack-1", 1 },
         { "science-pack-2", 1 },
         { "science-pack-3", 1 },
-        { "production-science-pack", 1 }
-        { "high-tech-science-pack", 1 }
-        { "space-science-pack", 1 }
+        { "production-science-pack", 1 },
+        { "high-tech-science-pack", 1 },
+        { "space-science-pack", 1 },
       },
       time = 60
     },
   }),
-  zen.tech.duplicateFromRaw("rocket-silo", {
+  zen.lib.tech.duplicateFromRaw("rocket-silo", {
     name = "superluminal-travel-6",
     icon = "__zenith-climax__/graphics/technology/superluminal-travel.png",
     effects = {
@@ -130,14 +130,14 @@ data:extend({
         { "science-pack-1", 1 },
         { "science-pack-2", 1 },
         { "science-pack-3", 1 },
-        { "production-science-pack", 1 }
-        { "high-tech-science-pack", 1 }
-        { "space-science-pack", 1 }
+        { "production-science-pack", 1 },
+        { "high-tech-science-pack", 1 },
+        { "space-science-pack", 1 },
       },
       time = 60
     },
   }),
-  zen.tech.duplicateFromRaw("rocket-silo", {
+  zen.lib.tech.duplicateFromRaw("rocket-silo", {
     name = "superluminal-travel-7",
     icon = "__zenith-climax__/graphics/technology/superluminal-travel.png",
     effects = {
@@ -162,9 +162,9 @@ data:extend({
         { "science-pack-1", 1 },
         { "science-pack-2", 1 },
         { "science-pack-3", 1 },
-        { "production-science-pack", 1 }
-        { "high-tech-science-pack", 1 }
-        { "space-science-pack", 1 }
+        { "production-science-pack", 1 },
+        { "high-tech-science-pack", 1 },
+        { "space-science-pack", 1 },
       },
       time = 60
     },
