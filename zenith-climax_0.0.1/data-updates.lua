@@ -18,3 +18,6 @@ data.raw["rocket-silo-rocket"]["superluminal-rocket"].rocket_flame_left_animatio
 
 data.raw["rocket-silo-rocket"]["superluminal-rocket"].rocket_flame_right_animation.filename =
   "__zenith-climax__/graphics/entity/superluminal-rocket-silo/jet-flame.png"
+
+
+require("prototypes.nyarlathotep")

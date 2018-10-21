@@ -1,31 +1,20 @@
 local function init()
   global = global or {}
-  global.launches = 0
 end
 
 script.on_init(function()
   init()
 end)
 
-local manuscripts = {
-  { "lost-manuscript-1", 1 },
-  { "lost-manuscript-1", 2 },
-  { "lost-manuscript-1", 3 },
-}
-
 local launch_products = {
-  "iron-plate",
-  "fusion-reactor",
-  "superluminal-thruster",
+  { "godly-assembly-machine", 1 },
+  { "godly-chemical-plant", 1 },
+  { "godly-oil-refinery", 1 },
+  { "godly-beacon", 1 },
+  { "godly-centrifuge", 1 },
+  { "godly-arboretum", 1 },
+  { "godly-furnace", 1 },
 }
-
-local function getLaunchResult(num)
-  if num < 4 then
-    return manuscripts[num]
-  else
-    return launch_products[math.random(#launch_products)]
-  end
-end
 
 script.on_event(defines.events.on_rocket_launched, function(event)
   local status, err = pcall(function()
@@ -41,9 +30,7 @@ script.on_event(defines.events.on_rocket_launched, function(event)
 
   if event.rocket_silo.name == "superluminal-rocket-silo" then
     if event.rocket.get_item_count("superluminal-data-transfer-computer") then
-      global.launches = global.launches + 1
-      game.print(global.launches)
-      event.rocket_silo.get_output_inventory().insert(getLaunchResult(global.launches))
+      -- event.rocket_silo.get_output_inventory().insert(launch_products[math.random(#launch_products)])
     end
   end
 end)

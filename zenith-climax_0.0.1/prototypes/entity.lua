@@ -11,12 +11,4 @@ data:extend({
     name = "superluminal-rocket",
   }),
 
-  zen.lib.duplicateFromRaw("lab", "lab", {
-    name = "athenaeum",
-    inputs = {
-      "lost-manunscript-1",
-      "lost-manunscript-2",
-      "lost-manunscript-3",
-    }
-  }),
 })
