@@ -91,4 +91,23 @@ data:extend({
     },
     result = "superluminal-rocket-silo",
   }),
+
+  zen.lib.recipe.duplicateFromRaw("satellite", {
+    name = "asteroid-extraction-unit",
+    ingredients = {
+      { "electric-mining-drill", 500 },
+      { "rocket-control-unit", 50 },
+      { "low-density-structure", 50 },
+      { "rocket-fuel", 50 },
+    },
+    result = "asteroid-extraction-unit",
+  }),
+  zen.lib.recipe.duplicateFromRaw("satellite", {
+    name = "planetary-extraction-unit",
+    ingredients = {
+      { "electric-mining-drill", 500 },
+      { "asteroid-extraction-unit", 50 },
+    },
+    result = "planetary-extraction-unit",
+  }),
 })

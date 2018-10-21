@@ -7,7 +7,7 @@ function chunk(name, result_count, additive_count)
         { name .. "-chunk", 1 },
       },
       results = {
-        { type = "fluid", name = "cupric-ore", amount = result_count },
+        { name = "cupric-ore", amount = result_count },
       }
     }, true),
     zen.lib.recipe.duplicateFromRaw("plastic-bar", {
@@ -17,7 +17,7 @@ function chunk(name, result_count, additive_count)
         { name .. "-chunk", 1 },
       },
       results = {
-        { type = "fluid", name = "ferric-ore", amount = result_count },
+        { name = "ferric-ore", amount = result_count },
       }
     }, true),
     zen.lib.recipe.duplicateFromRaw("plastic-bar", {
@@ -27,7 +27,7 @@ function chunk(name, result_count, additive_count)
         { name .. "-chunk", 1 },
       },
       results = {
-        { type = "fluid", name = "coal", amount = result_count },
+        { name = "coal", amount = result_count },
       }
     }, true),
     zen.lib.recipe.duplicateFromRaw("plastic-bar", {
@@ -37,7 +37,7 @@ function chunk(name, result_count, additive_count)
         { name .. "-chunk", 1 },
       },
       results = {
-        { type = "fluid", name = "stone", amount = result_count },
+        { name = "stone", amount = result_count },
       }
     }, true),
     zen.lib.recipe.duplicateFromRaw("plastic-bar", {
@@ -48,7 +48,7 @@ function chunk(name, result_count, additive_count)
         { type = "fluid", name = "sulfuric-acid", amount = additive_count },
       },
       results = {
-        { type = "fluid", name = "uranium-ore", amount = result_count },
+        { name = "uranium-ore", amount = result_count },
       }
     }, true),
   })

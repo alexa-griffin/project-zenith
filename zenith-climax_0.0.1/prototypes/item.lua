@@ -3,6 +3,11 @@ data:extend({
     name = "superluminal-data-transfer-computer",
     icon = "__zenith-climax__/graphics/icons/superluminal-data-transfer-computer.png",
     stack_size = 1,
+    rocket_launch_products = {
+      { "iron-ore", 1 },
+      { "copper-ore", 1 },
+      { "coal", 1 },
+    }
   }),
   zen.lib.item.duplicateFromRaw("low-density-structure", {
     name = "superluminal-brain",
@@ -46,14 +51,14 @@ data:extend({
   }),
 
   zen.lib.item.duplicateFromRaw("satellite", {
-    name = "asteroid-extractor-unit",
+    name = "asteroid-extraction-unit",
     -- icon = "__zenith-climax__/graphics/icons/superluminal-rocket-part.png",
     rocket_launch_product = { "asteroid-chunk", 1000 }
   }),
   zen.lib.item.duplicateFromRaw("satellite", {
-    name = "planetary-extractor-unit",
+    name = "planetary-extraction-unit",
     -- icon = "__zenith-climax__/graphics/icons/superluminal-rocket-part.png",
-    rocket_launch_product = { "planet-chunk", 10000 }
+    rocket_launch_product = { "planetary-chunk", 10000 }
   }),
 
   zen.lib.item.duplicateFromRaw("ferric-ore", {
@@ -61,7 +66,7 @@ data:extend({
     -- icon = "__zenith-climax__/graphics/icons/superluminal-rocket-part.png",
   }),
   zen.lib.item.duplicateFromRaw("ferric-ore", {
-    name = "planet-chunk",
+    name = "planetary-chunk",
     -- icon = "__zenith-climax__/graphics/icons/superluminal-rocket-part.png",
   }),
 })

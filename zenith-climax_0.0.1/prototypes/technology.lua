@@ -164,23 +164,23 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "ferric-ore-from-astroid-chunk"
+        recipe = "ferric-ore-from-asteroid-chunk"
       },
       {
         type = "unlock-recipe",
-        recipe = "cupric-ore-from-astroid-chunk"
+        recipe = "cupric-ore-from-asteroid-chunk"
       },
       {
         type = "unlock-recipe",
-        recipe = "uranium-ore-from-astroid-chunk"
+        recipe = "uranium-ore-from-asteroid-chunk"
       },
       {
         type = "unlock-recipe",
-        recipe = "stone-from-astroid-chunk"
+        recipe = "stone-from-asteroid-chunk"
       },
       {
         type = "unlock-recipe",
-        recipe = "coal-from-astroid-chunk"
+        recipe = "coal-from-asteroid-chunk"
       },
     },
     prerequisites = { "rocket-silo" },
@@ -203,27 +203,27 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "planetary-extractor-unit"
+        recipe = "planetary-extraction-unit"
       },
       {
         type = "unlock-recipe",
-        recipe = "ferric-ore-from-planet-chunk"
+        recipe = "ferric-ore-from-planetary-chunk"
       },
       {
         type = "unlock-recipe",
-        recipe = "cupric-ore-from-planet-chunk"
+        recipe = "cupric-ore-from-planetary-chunk"
       },
       {
         type = "unlock-recipe",
-        recipe = "uranium-ore-from-planet-chunk"
+        recipe = "uranium-ore-from-planetary-chunk"
       },
       {
         type = "unlock-recipe",
-        recipe = "stone-from-planet-chunk"
+        recipe = "stone-from-planetary-chunk"
       },
       {
         type = "unlock-recipe",
-        recipe = "coal-from-planet-chunk"
+        recipe = "coal-from-planetary-chunk"
       },
     },
     prerequisites = { "asteroid-mining" },
