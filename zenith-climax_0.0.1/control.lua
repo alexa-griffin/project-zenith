@@ -9,5 +9,12 @@ script.on_event(defines.events.on_rocket_launched, function(event)
     player_won = false,
     can_continue = true
   })
-  game.print(serpent.block(event.rocket_silo.get_output_inventory().clear()))
+  if event.rocket_silo.name == "superluminal-rocket-silo" then
+    if event.rocket.get_item_count("superluminal-data-transfer-computer") then
+      event.rocket_silo.get_output_inventory().clear()
+      event.rocket_silo.get_output_inventory().insert({
+        name = "uranium-fuel-cell"
+      })
+    end
+  end
 end)
