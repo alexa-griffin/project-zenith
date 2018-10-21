@@ -154,4 +154,90 @@ data:extend({
       time = 60
     },
   }),
+  zen.lib.tech.duplicateFromRaw("rocket-silo", {
+    name = "asteroid-mining",
+    icon = "__zenith-climax__/graphics/technology/asteroid-mining.png",
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "asteroid-extraction-unit"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "ferric-ore-from-astroid-chunk"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "cupric-ore-from-astroid-chunk"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "uranium-ore-from-astroid-chunk"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "stone-from-astroid-chunk"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "coal-from-astroid-chunk"
+      },
+    },
+    prerequisites = { "rocket-silo" },
+    unit = {
+      count = 1000,
+      ingredients = {
+        { "science-pack-1", 1 },
+        { "science-pack-2", 1 },
+        { "science-pack-3", 1 },
+        { "production-science-pack", 1 },
+        { "high-tech-science-pack", 1 },
+        { "space-science-pack", 1 },
+      },
+      time = 60
+    },
+  }),
+  zen.lib.tech.duplicateFromRaw("rocket-silo", {
+    name = "planetary-extraction",
+    icon = "__zenith-climax__/graphics/technology/asteroid-mining.png",
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "planetary-extractor-unit"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "ferric-ore-from-planet-chunk"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "cupric-ore-from-planet-chunk"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "uranium-ore-from-planet-chunk"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "stone-from-planet-chunk"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "coal-from-planet-chunk"
+      },
+    },
+    prerequisites = { "asteroid-mining" },
+    unit = {
+      count = 5000,
+      ingredients = {
+        { "science-pack-1", 1 },
+        { "science-pack-2", 1 },
+        { "science-pack-3", 1 },
+        { "production-science-pack", 1 },
+        { "high-tech-science-pack", 1 },
+        { "space-science-pack", 1 },
+      },
+      time = 60
+    },
+  }),
 })
