@@ -4,6 +4,11 @@ data:extend({
     icon = "__zenith-climax__/graphics/icons/superluminal-data-transfer-computer.png",
     stack_size = 1,
     rocket_launch_products = {
+      {
+        name = "iron-plate",
+        amount = 0,
+        probability = 0,
+      },
       { "iron-ore", 1 },
       { "copper-ore", 1 },
       { "coal", 1 },
