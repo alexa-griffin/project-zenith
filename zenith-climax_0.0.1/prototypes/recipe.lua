@@ -110,4 +110,14 @@ data:extend({
     },
     result = "planetary-extraction-unit",
   }),
+
+  zen.lib.recipe.duplicateFromRaw("lab", {
+    name = "athenaeum",
+    ingredients = {
+      { "lab", 50 },
+      { "low-density-structure", 50 },
+      { "bio-computer", 10 },
+    },
+    result = "athenaeum",
+  }),
 })

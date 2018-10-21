@@ -240,4 +240,27 @@ data:extend({
       time = 60
     },
   }),
+  zen.lib.tech.duplicateFromRaw("rocket-silo", {
+    name = "ancient-text-deciphering",
+    icon = "__zenith-climax__/graphics/technology/ancient-text-deciphering.png",
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "athenaeum"
+      },
+    },
+    prerequisites = { "superluminal-travel-7" },
+    unit = {
+      count = 1000,
+      ingredients = {
+        { "science-pack-1", 1 },
+        { "science-pack-2", 1 },
+        { "science-pack-3", 1 },
+        { "production-science-pack", 1 },
+        { "high-tech-science-pack", 1 },
+        { "space-science-pack", 1 },
+      },
+      time = 60
+    },
+  }),
 })

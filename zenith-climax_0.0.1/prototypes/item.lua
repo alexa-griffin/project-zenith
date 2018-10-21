@@ -3,16 +3,6 @@ data:extend({
     name = "superluminal-data-transfer-computer",
     icon = "__zenith-climax__/graphics/icons/superluminal-data-transfer-computer.png",
     stack_size = 1,
-    rocket_launch_products = {
-      {
-        name = "iron-plate",
-        amount = 0,
-        probability = 0,
-      },
-      { "iron-ore", 1 },
-      { "copper-ore", 1 },
-      { "coal", 1 },
-    }
   }),
   zen.lib.item.duplicateFromRaw("low-density-structure", {
     name = "superluminal-brain",
@@ -73,5 +63,23 @@ data:extend({
   zen.lib.item.duplicateFromRaw("ferric-ore", {
     name = "planetary-chunk",
     -- icon = "__zenith-climax__/graphics/icons/superluminal-rocket-part.png",
+  }),
+
+  zen.lib.item.duplicateFromRaw("lab", {
+    name = "athenaeum",
+    place_result = "athenaeum",
+  }),
+
+  zen.lib.duplicateFromRaw("tool", "science-pack-1", {
+    name = "lost-manunscript-1",
+    icon = "__zenith-climax__/graphics/icons/lost-manuscript.png",
+  }),
+  zen.lib.duplicateFromRaw("tool", "science-pack-1", {
+    name = "lost-manunscript-2",
+    icon = "__zenith-climax__/graphics/icons/lost-manuscript.png",
+  }),
+  zen.lib.duplicateFromRaw("tool", "science-pack-1", {
+    name = "lost-manunscript-3",
+    icon = "__zenith-climax__/graphics/icons/lost-manuscript.png",
   }),
 })
