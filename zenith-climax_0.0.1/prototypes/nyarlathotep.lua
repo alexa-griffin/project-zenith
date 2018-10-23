@@ -7,12 +7,14 @@ function nyarlathotep(dupTarget, overridesItem, overridesEntity, dupCat)
 end
 
 local nyarlathotep_glow = {
-  effect = "nyarlathotep-glow",
-  light = {
-    intensity = 0.6,
-    size = 9.9,
-    shift = { 0.0, 0.0 },
-    color = zen.lib.hexToColor("#0ed6c5")
+  {
+    effect = "uranium-glow",
+    light = {
+      intensity = 0.6,
+      size = 9.9,
+      shift = { 0.0, 0.0 },
+      color = zen.lib.hexToColor("#0ed6c5")
+    }
   }
 }
 

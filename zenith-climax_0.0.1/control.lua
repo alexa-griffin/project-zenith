@@ -13,7 +13,7 @@ local launch_products = {
   { "godly-beacon", 1 },
   { "godly-centrifuge", 1 },
   { "godly-arboretum", 1 },
-  { "godly-furnace", 1 },
+  -- { "godly-furnace", 1 },
 }
 
 script.on_event(defines.events.on_rocket_launched, function(event)
@@ -30,7 +30,7 @@ script.on_event(defines.events.on_rocket_launched, function(event)
 
   if event.rocket_silo.name == "superluminal-rocket-silo" then
     if event.rocket.get_item_count("superluminal-data-transfer-computer") then
-      -- event.rocket_silo.get_output_inventory().insert(launch_products[math.random(#launch_products)])
+      event.rocket_silo.get_output_inventory().insert(launch_products[math.random(#launch_products)])
     end
   end
 end)
