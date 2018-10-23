@@ -33,6 +33,20 @@ data:extend({
     result = "bronze-plate",
     result_count = 2,
   }, true),
+
+  zen.lib.recipe.duplicateFromRaw("copper-plate", {
+    name = "pure-copper-smelting",
+    ingredients = {{ "copper-ore", 1 }},
+    result = "copper-plate",
+    result_count = 1,
+  }, true),
+
+  zen.lib.recipe.duplicateFromRaw("iron-plate", {
+    name = "pure-iron-smelting",
+    ingredients = {{ "iron-ore", 1 }},
+    result = "iron-plate",
+    result_count = 1,
+  }, true),
 })
 
 zen.lib.recipe.modifyRaw("steel-plate", {
@@ -52,6 +66,7 @@ zen.lib.recipe.modifyRaw("steel-plate", {
       { "pig-iron", 10 },
     },
     result = "steel-plate",
+    result_count = 2
   }
 })
 
