@@ -40,18 +40,16 @@ zen.lib.recipe.modifyRaw("steel-plate", {
     enabled = false,
     energy_required = 17.5,
     ingredients = {
-      { "iron-plate", 5 },
-      { "coke", 2 }
+      { "pig-iron", 5 },
     },
     result = "steel-plate",
     result_count = 2
   },
   expensive = {
     enabled = false,
-    energy_required = 17.5,
+    energy_required = 35,
     ingredients = {
-      { "iron-plate", 5 },
-      { "coke", 2 }
+      { "pig-iron", 10 },
     },
     result = "steel-plate",
   }

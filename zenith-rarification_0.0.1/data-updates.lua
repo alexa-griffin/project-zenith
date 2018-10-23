@@ -1,14 +1,3 @@
-for i, _ in pairs(data.raw["furnace"]) do
-  if zen.lib.inArr(data.raw["furnace"][i].crafting_categories, "smelting") then
-    local machine = zen.lib.duplicateFromRaw("furnace", i, {
-      ingredient_count = 2,
-      type = "assembling-machine",
-    })
-    data.raw["assembling-machine"][machine.name] = machine
-    data.raw["furnace"][i] = nil
-  end
-end
-
 data.raw["recipe"]["low-density-structure"].normal.ingredients = {
   { "bio-polymer", 5 },
   { "plastic-bar", 5 },
@@ -28,3 +17,5 @@ data.raw["recipe"]["low-density-structure"].expensive.ingredients = {
 
 data.raw.item["stone"].icon = "__zenith-rarification__/graphics/icons/stone.png"
 data.raw.item["coal"].icon = "__zenith-rarification__/graphics/icons/coal.png"
+data.raw.item["copper-ore"].icon = "__zenith-rarification__/graphics/icons/copper-ore.png"
+data.raw.item["iron-ore"].icon = "__zenith-rarification__/graphics/icons/iron-ore.png"
