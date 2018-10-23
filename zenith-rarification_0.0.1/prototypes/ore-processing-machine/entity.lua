@@ -64,5 +64,14 @@ data:extend({
         }
       }
     },
-  })
+  }),
+  zen.lib.item.duplicateFromRaw("assembling-machine", {
+    name = "ore-processing-machine",
+    place_result = "ore-processing-machine",
+  }),
+  zen.lib.recipe.duplicateFromRaw("assembling-machine", {
+    name = "ore-processing-machine",
+    enabled = true,
+    result = "ore-processing-machine",
+  }),
 })

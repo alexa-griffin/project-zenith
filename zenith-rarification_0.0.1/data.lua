@@ -15,6 +15,7 @@ data:extend({
 
 require("prototypes.fluid")
 require("prototypes.item")
+require("prototypes.ore-processing-machine.entity")
 require("prototypes.smelting")
 require("prototypes.floating")
 require("prototypes.technology")
