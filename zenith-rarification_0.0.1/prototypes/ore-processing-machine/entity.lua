@@ -1,5 +1,5 @@
 data:extend({
-  zen.lib.duplicateFromRaw("assembling-machine", {
+  zen.lib.duplicateFromRaw("assembling-machine", "assembling-machine-1", {
     name = "ore-processing-machine",
     collision_box = {{ -0.7, -0.7 }, { 0.7, 0.7 }},
     selection_box = {{ -1, -1 }, { 1, 1 }},
@@ -42,7 +42,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__zenith-rarification__/graphics/entity/ore-processing-machine/ore-processing-machine.png",
+          filename = "__zenith-rarification__/graphics/entity/ore-processing-machine.png",
           priority = "high",
           width = 108,
           height = 119,
@@ -65,11 +65,11 @@ data:extend({
       }
     },
   }),
-  zen.lib.item.duplicateFromRaw("assembling-machine", {
+  zen.lib.item.duplicateFromRaw("assembling-machine-1", {
     name = "ore-processing-machine",
     place_result = "ore-processing-machine",
   }),
-  zen.lib.recipe.duplicateFromRaw("assembling-machine", {
+  zen.lib.recipe.duplicateFromRaw("assembling-machine-1", {
     name = "ore-processing-machine",
     enabled = true,
     result = "ore-processing-machine",
