@@ -67,6 +67,7 @@ data:extend({
   }),
   zen.lib.item.duplicateFromRaw("assembling-machine-1", {
     name = "ore-processing-machine",
+    icon = "__zenith-rarification__/graphics/icons/ore-processing-machine.png",
     place_result = "ore-processing-machine",
   }),
   zen.lib.recipe.duplicateFromRaw("assembling-machine-1", {
