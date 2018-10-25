@@ -22,15 +22,9 @@ function generateOreItems(settings)
       name = settings.name .. "-crystals",
       icon = "__zenith-rarification__/graphics/icons/" .. settings.name .. "-crystals.png",
     }),
-    zen.lib.duplicateFromRaw("fluid", "water", {
+    zen.lib.item.duplicateFromRaw("iron-ore", {
       name = settings.name .. "-essence",
       icon = "__zenith-rarification__/graphics/icons/" .. settings.name .. "-essence.png",
-      base_color = zen.lib.hexToColor(settings.essence.base_color),
-      flow_color = zen.lib.hexToColor(settings.essence.flow_color),
-    }),
-    zen.lib.item.duplicateFromRaw("iron-ore", {
-      name = "pure-" .. settings.name,
-      icon = "__zenith-rarification__/graphics/icons/pure-" .. settings.name .. ".png",
     }),
   })
 end
